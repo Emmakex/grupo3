@@ -7,15 +7,21 @@
     <meta name="author" content="Grupo 3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo 3</title>
+    <style>
+        main section img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
 </head>
 <header>
-  <h1>My Bussines Webpage</h1>
+    <h1>My Bussines Webpage</h1>
     <nav>
         <ul>
-            <li><a href="">Who We are?</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#">Who We are?</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -63,7 +69,33 @@
     <img src="img/10.jpg" height="200" alt="Imagen diez">
 <!-- /Galeria de Imagenes-->
   </section>
+  <aside>
+    <section>
+      <h2>Ads</h2>
+      <ul>
+        <li><a href="#">Ad 1</a></li>
+        <li><a href="#">Ad 2</a></li>
+      </ul>
+    </section>
+    <figure>
+      <img width="165" height="60"
+           src="https://www.salleurl.edu/sites/all/themes/lasalle2016beta/logos/salle_en.png"
+           alt="La Salle logo"/>
+      <figcaption>La Salle</figcaption>
+    </figure>
+  </aside>
 </main>
+<section>
+    <h2>Email Us</h2>
+    <form action="/gracias.html" method="post">
+        <label>Name*: </label> <input type="text" name="name" required><br>
+        <label>Email*: </label> <input type="text" name="email" required><br>
+        <label>Phone: </label> <input type="number" name="phone"><br>
+        <label>Company Name: </label> <input type="text" name="companyname"><br>
+        <label>Subjet*: </label> <input type="text" name="subjet" required><br>
+        <label>Message*: </label> <textarea name="textarea" rows="5" cols="40"></textarea><br>
+        <input type="submit" value="Send"><br>
+</section>
 <footer><p>&#169; 2016 - <a href="https://www.salleurl.edu/es">LaSalle,</a> All Rights Reserved.</p></footer>
 </body>
 </html>
