@@ -1,0 +1,46 @@
+/* Portfolio */
+*{
+    font-family: "Open Sans", sans-serif;
+    line-height: 2rem;
+}
+#portfolio img{
+    width: 250px;
+    height: 150px;
+    margin: 2px;
+}
+
+#portfolio img:hover{
+    transform: rotateZ(-8deg);
+    transition: 1s linear;
+}
+#portfolio img.rotation:hover{
+    transform: rotate(1turn);
+    border-radius: ;
+    transition: 1s;
+}
+
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0px 100px;
+    background-color: #F2F2F2;
+    
+}
+#imagenes{
+    width: 770px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+}
+#portfolio h2{
+    color: #4E4E4E;
+    font-size: 2.5rem;
+}
+#portfolio p{
+    color: #787878;
+    font-size: 1.3rem;
+}
+/* /Portfolio */
