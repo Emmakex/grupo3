@@ -12,8 +12,7 @@ header {
     background-repeat: no-repeat;
     color: #fff;
     min-height: 600px; 
-    position: relative; 
-    display: flex; 
+    position: relative;  
     align-items: center; 
     justify-content: left;
 }
