@@ -33,19 +33,19 @@ nav {
     padding: 20px 0; 
 }
 
-nav ul {
-    list-style-type: none;
+.nav-list {
+    list-style: none;
     margin: 0;
     padding: 0;
     text-align: left;
 }
 
-nav ul li {
+.nav-list li {
     display: inline;
     margin: 0 10px;
 }
 
-nav ul li a {
+.nav-link {
     text-decoration: none;
     color: #ffffff;
     padding: 10px;  
@@ -53,8 +53,10 @@ nav ul li a {
     border-radius: 5px;  
 }
 
-nav ul li a:hover {
+.nav-link:hover {
     background-color: #fff;  
     color: #61458C;  
 }
+
+
 /* Fin Css Header Eduardo */
