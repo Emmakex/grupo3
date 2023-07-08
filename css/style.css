@@ -249,3 +249,39 @@ footer a{
     }
 }
 /* /Gracias por contactarnos Vicky */
+/* Map Vicky */
+#contact{
+    margin: auto;
+    text-align: center;
+    padding: 6%;
+}
+#contact h2{
+    margin-bottom: 2%;
+}
+#contact h3{
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+#contact h4{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #4E4E4E;
+}
+#map{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px solid #4e4e4e;
+    display: inline-block;
+}
+#address{
+    display: inline-block;
+    margin-left: 5%;
+    text-align: left;
+    vertical-align: bottom;
+}
+#address address{
+    margin-bottom: 2em;
+}
+/* /Map Vicky */
