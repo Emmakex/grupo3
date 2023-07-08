@@ -155,7 +155,7 @@ h2{
     border-radius: 50%;
 }
 /* /Portfolio */
-/* Formulario de contacto */
+/* Formulario de contacto Vicky */
 #containerFormContact{
     background-color: #79629e;
     background-image: url(../img/map-image.png);
@@ -163,6 +163,8 @@ h2{
     padding-top: 5%;
     padding-bottom: 6%;
     background-size: auto 100%;
+    margin: auto;
+    text-align: center;
 }
 #containerFormContact h2{
     color: white;
@@ -170,38 +172,41 @@ h2{
 }
 #containerFormContactList{
     color: white;
-    padding-left: 35%;
-    display: inline-block;
     font-size: 1.4em;
     width: 500px;
+    margin: auto;
 }
 #containerFormContact label{
-    float: left;
-    clear: left;
+    display: inline-block;
     width: 150px;
     text-align: left;
-    margin-bottom: 5px;
+    vertical-align: top;
 }
 #containerFormContact input{
-    float: left;
-    width: 200px;
+    display: inline-block;
+    width: 300px;
     border-radius: 4px;
     border: none;
+    text-align: left;
+    margin-bottom: 10px;
 }
 #containerFormContact textarea{
-    float: left;
-    width: 200px;
+    display: inline-block;
+    width: 300px;
     border-radius: 4px;
     border: none;
+    text-align: left;
+    margin-bottom: 10px;
 }
 #containerFormContact input[type="submit"]{
-    margin: 10px 10px 0px 150px;
+    margin: 10px 0px 0px 150px;
+    text-align: center;
     &:hover{
         background-color: #a5a5a5;
     }
 }
-/* /Formulario de contacto */
-/* Footer */
+/* /Formulario de contacto Vicky */
+/* Footer Vicky */
 footer p{
     background-color: #61458C;
     color: #ffffff;
@@ -216,8 +221,8 @@ footer a{
         background-color: #f2f2f2;
     }
 }
-/* /Footer */
-/* Gracias por contactarnos */
+/* /Footer Vicky */
+/* Gracias por contactarnos Vicky */
 .mt-4{
     margin-top: 4%;
 }
@@ -243,4 +248,4 @@ footer a{
         color: #4e4e4e;
     }
 }
-/* /Gracias por contactarnos */
+/* /Gracias por contactarnos Vicky */
