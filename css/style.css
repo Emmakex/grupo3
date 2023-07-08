@@ -1,0 +1,260 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+h2{
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: 500;
+}
+/* /Estilos Generales */
+/* Formulario de contacto */
+#containerFormContact{
+    background-color: #79629e;
+    background-image: url(../img/map-image.png);
+    min-height: 300px;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    background-size: auto 100%;
+}
+#containerFormContact h2{
+    color: white;
+    margin-bottom: 2%;
+}
+#containerFormContactList{
+    color: white;
+    padding-left: 35%;
+    display: inline-block;
+    font-size: 1.4em;
+    width: 50%;
+}
+#containerFormContact label{
+    float: left;
+    clear: left;
+    width: 150px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+#containerFormContact input{
+    float: left;
+    width: 200px;
+    border-radius: 4px;
+    border: none;
+}
+#containerFormContact textarea{
+    float: left;
+    width: 200px;
+    border-radius: 4px;
+    border: none;
+}
+#containerFormContact input[type="submit"]{
+    margin: 10px 10px 0px 150px;
+    &:hover{
+        background-color: #a5a5a5;
+    }
+}
+/* /Formulario de contacto */
+/* Footer */
+footer p{
+    background-color: #61458C;
+    color: #ffffff;
+    margin: 0px;
+    padding: 15px 15px 15px 0;
+    text-align: right;
+}
+footer a{
+    color: #ffffff;
+    &:hover{
+        color: #4e4e4e;
+        background-color: #f2f2f2;
+    }
+}
+/* /Footer */
+/* Gracias por contactarnos */
+.mt-4{
+    margin-top: 4%;
+}
+.pt-15{
+    padding-top: 15%;
+}
+.textCenter{
+    text-align: center;
+}
+.thanks{
+    min-height: 95vh;
+}
+.buttonFirst{
+    color:#ffffff;
+    font-size: 1.1em;
+    background-color: #61458C;
+    padding: 1% 2%;
+    border-radius: 10px;
+    text-decoration: none;
+    &:hover{
+        border: 2px solid #61458C;
+        background-color: white;
+        color: #4e4e4e;
+    }
+}
+/* /Gracias por contactarnos */

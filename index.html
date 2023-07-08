@@ -7,6 +7,9 @@
     <meta name="author" content="Grupo 3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <title>Grupo 3</title>
     <style>
         main section img{
@@ -112,22 +115,29 @@
                     Email adress: <a href="mailto:info@salleurl.edu">info@salleurl.edu</a><br>
                 </address>
         </section>
-        <section>
-            <h2>Email Us</h2>
-            <form action="gracias.html" method="post">
-                <label>Name*: </label> <input type="text" name="name" required><br>
-                <label>Email*: </label> <input type="email" name="email" required><br>
-                <label>Phone: </label> <input type="tel" name="phone"><br>
-                <label>Company Name: </label> <input type="text" name="companyname"><br>
-                <label>Subjet*: </label> <input type="text" name="subjet" required><br>
-                <label>Message*: </label> <textarea name="textarea" rows="5" cols="40"></textarea><br>
-                <input type="submit" value="Send"></form><br>
-        </section>
     <!-- /Contacto -->
+    <!-- Formulario contacto -->
+    <section id="containerFormContact">
+        <h2>Email Us</h2>
+        <form action="gracias.html" method="post" id="containerFormContactList">
+            <label for="name">Name:* </label>
+            <input type="text" name="name" required>
+            <label for="email">Email:* </label>
+            <input type="email" name="email" required>
+            <label for="phone">Phone: </label>
+            <input type="tel" name="phone">
+            <label for="subject">Subject:* </label>
+            <input type="text" name="subject" required>
+            <label for="message">Message:* </label>
+            <textarea name="message" rows="5" cols="40"></textarea>
+            <input type="submit" value="Send" class="buttonSubmit">
+        </form>
+    </section>
+<!-- /Formulario contacto -->
     </main>
     <!-- Pie de página -->
     <footer>
-        <p>&#169; 2016 - <a href="https://www.salleurl.edu/es">LaSalle,</a> All Rights Reserved.</p>
+        <p>&#169; 2016 - <a href="https://www.salleurl.edu/es" target="_blank">LaSalle,</a> All Rights Reserved.</p>
     </footer>
     <!-- Pie de página -->
     </body>
