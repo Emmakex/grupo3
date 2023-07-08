@@ -1,4 +1,4 @@
-/* /Estilos Generales */
+/* /Estilos Generales 
 *{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -8,6 +8,7 @@ h2{
     font-size: 3.2em;
     font-weight: 500;
 }
+*/
 =======
 /* Inicio Css Header Eduardo */
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 header {
-    background-image: url('/img/header.jpg');
+    background-image: url('img/header.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
