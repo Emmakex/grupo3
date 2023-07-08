@@ -42,7 +42,7 @@ nav {
 
 .nav-list li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .nav-link {
@@ -57,6 +57,4 @@ nav {
     background-color: #fff;  
     color: #61458C;  
 }
-
-
 /* Fin Css Header Eduardo */
