@@ -84,7 +84,6 @@ h2{
     text-align: center;
  }
  
-
  #Service article {
     width: 25%;
     margin: 10px;
@@ -158,7 +157,9 @@ h2{
     border-radius: 50%;
 }
 /* /Portfolio */
+
 /* Formulario de contacto Vicky */
+
 #containerFormContact{
     background-color: #79629e;
     background-image: url(../img/map-image.png);
