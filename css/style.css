@@ -2,9 +2,10 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    line-height: 2rem;
 }
-/* Estilos Generales */
+ /*Estilos Generales */
 =======
 /* Inicio Css Header Eduardo */
 body {
@@ -70,6 +71,7 @@ nav {
 /* Fin Css Header Eduardo */
 
 /*Servicios*/
+/*
 h2{
     font-size: 2em; 
  }
@@ -77,11 +79,12 @@ h2{
  h3{
     font-size: 1.5em;
  }
- 
+ */
  #Service  {
     text-align: center;
  }
  
+
  #Service article {
     width: 25%;
     margin: 10px;
@@ -118,10 +121,12 @@ h2{
 
 /* Portfolio */
 
+/*
 *{
     font-family: "Open Sans", sans-serif;
-    line-height: 2rem;
+    line-height: 2rem;    
 }
+*/
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
