@@ -26,13 +26,12 @@ header {
 .header-content {
     position: absolute;
     top: 50%;
-    left: 17%;
+    left: 18%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .header-title {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 nav {
