@@ -6,13 +6,11 @@
     line-height: 2rem;
 }
  /*Estilos Generales */
-=======
+
 /* Inicio Css Header Eduardo */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
     max-width: 1024px;
+    margin: 0 auto;    
 }
 
 header {
@@ -112,15 +110,7 @@ nav {
 /*Fin Who We Are*/
 
 /*Servicios*/
-/*
-h2{
-    font-size: 2em; 
- }
- 
- h3{
-    font-size: 1.5em;
- }
- */
+
  #Service  {
     text-align: center;
     padding-top: 30px;
@@ -170,12 +160,6 @@ h2{
 
 /* Portfolio */
 
-/*
-*{
-    font-family: "Open Sans", sans-serif;
-    line-height: 2rem;    
-}
-*/
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
@@ -192,7 +176,7 @@ h2{
 }
 .image-center{
     margin: auto;
-    width: 50%;
+    width: 75%;
 }
 .image-center img{
     width: 200px;
@@ -208,35 +192,31 @@ h2{
 }
 /* /Portfolio */
 
-/*
-Contacto
-*/
+/* Contacto */
 .center-align {
     text-align: center;
 }
 .map {
     border-radius: 50%;
     border: 3px solid #4e4e4e;
-    float: left;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-right: 20px;
 }
 .contact {
     text-align: center; 
-    float:right;
 }
 .container {
-    max-width: 600px;
+    max-width: 800px;
+    margin: auto;
+    /*position: relative;*/
+}
+.left-element, .right-element {
+    
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
     margin: 0 auto;
-    position: relative;
-}
-.left-element {
-    left: 0;
-}
-.right-element {
-    right: 0;
-    text-align: right;
 }
 
 /* Formulario de contacto Vicky */
