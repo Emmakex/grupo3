@@ -116,7 +116,10 @@
 
 
 /* Portfolio */
-
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
 *{
     font-family: "Open Sans", sans-serif;
     line-height: 2rem;
@@ -137,7 +140,7 @@
 }
 .image-center{
     margin: auto;
-    width: 50%;
+    width: 75%;
 }
 .image-center img{
     width: 200px;
