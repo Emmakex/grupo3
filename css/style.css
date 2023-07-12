@@ -80,6 +80,43 @@ h2{
     font-size: 1.5em;
  }
  */
+
+/*Inicio Who We Are*/
+
+#weare{
+  padding: 65px;
+  text-align: center;
+}
+
+#weare h2{
+    font-size: 40px;
+}
+
+.containt-weare{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.containt-weare p{
+    width: 65%;
+    text-align: center;
+}
+
+.cont-description-weare{
+    display: flex;
+    gap:30px;
+}
+
+.container-article {
+    display:inline-block;
+    margin-right: 12px;
+}
+
+
+/*Fin Who We Are*/
+
  #Service  {
     text-align: center;
  }
