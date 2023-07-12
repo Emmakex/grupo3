@@ -1,0 +1,30 @@
+/*
+Contacto
+*/
+    .center-align {
+        text-align: center;
+    }
+    .map {
+        border-radius: 50%;
+        border: 3px solid #4e4e4e;
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+    .contact {
+        text-align: center; 
+        float:right;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .left-element {
+        left: 0;
+    }
+    .right-element {
+        right: 0;
+        text-align: right;
+    }
