@@ -6,10 +6,10 @@ Contacto
     }
     .map {
         border-radius: 50%;
-        border: 3px solid #4e4e4e;
+        border: 2px solid #4e4e4e;
         float: left;
-        width: 200px;
-        height: 200px;
+        width: 280px;
+        height: 280px;
         margin-right: 20px;
     }
     .contact {
