@@ -1,10 +1,63 @@
+/* estilos generales */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+h1{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 120px;
+    padding-left: 20px;
+}
+/* / estilos generales */
+
+/* estilos header */
+#header{
+    width: 100%;
+    height: 340px;
+    background-image: url('../img/header.jpg');
+    background-position: center;
+	background-attachment: contain;
+	background-size: 100% auto;
+}
+
+#header ul{
+    margin-top: 130px;
+    padding-left: 20px;
+    background-color: #61458C;
+    font-weight: 400;
+}
+
+#header li{
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    padding: 15px 0px 15px 20px;
 }
 
 
+#header a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+#header li:hover{
+    padding: 0;
+}
+
+#header li:hover a{
+    padding: 10px 20px 14px;
+    border-radius: 5px;
+    background-color: white;
+    color: #61458C;
+}
+
+/* / fin estilos header */
 main section img{
     width: 300px;
     height: 200px;
