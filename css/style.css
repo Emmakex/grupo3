@@ -70,43 +70,67 @@ nav {
 
 /* Inicio Who We Are*/
 /*#vertical-bar{
+  width: 1px;
+  height: 85%;
+  left: 50%;
+  top:14%;
+  position: absolute;
+  }*/
+  #vertical-bar{
     width: 1px;
-    height: 85%;
-    left: 50%;
-    top:14%;
-    position: absolute;
-   }*/
-   #vertical-bar{
-    width: 1px;
-    height: 85%;
-    left: 50%;
-    top:14%;
+    height: 80%;
+    left: 47.5%;
+    top: 20%; /* - --> sube, + --> baja*/
     background-color: lightgrey;
     position: absolute;
-   }
-/*#right {
+    }
+  /*#right {
     border-left: 1px solid lightgrey;
-}*/
- #whoweare{
+  }*/
+  #whoweare h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+   #whoweare{
+    box-sizing: border-box;
     background-color: #faf5f5ce;
     text-align: center;
     position: relative;
+   /* padding-top: 30px;*/
+  }
+  #whoweare h3{
+    margin-bottom: 30px;
+  }
+  #whoweare article{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: 10px;}
+  .right-article{
+   display: inline-block;
+   width: 45%;
+   /* padding: 10px;*/
+   text-align: justify;
+   /*padding-top: 30px;*/
+   margin-top:70px;
+   letter-spacing:1px;
+  }
+  .left-article{
+    display: inline-block;
+    width: 40%;
+    text-align: justify;
+    /*padding-top: 30px;*/
+    margin-top:70px;
+    letter-spacing:1px;
    }
-#whoweare article{
-  display: inline-block;
-  width: 40%;
-  padding: 10px;
-  text-align: justify;
-}
-#left-img{
+  #left-img{
     float: left;
-}
-#center-img{
-        display: block;
-        margin: 40px auto 40px auto;
-}
-
-/*Fin Who We Are*/
+    margin-right: 5px;
+  }
+  #center-img{
+      display: block;
+      margin: 45px auto 45px auto;
+  }
+  /*Fin Who We Are*/
 
 /*Servicios*/
 
