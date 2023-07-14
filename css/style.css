@@ -231,9 +231,10 @@ nav {
     margin-left: 5%;
     text-align: left;
     vertical-align: bottom;
+    margin-bottom: 4em;
 }
-#address address{
-    margin-bottom: 2em;
+address{
+    padding-bottom: 20px;
 }
 /* Fin Contacto */
 
