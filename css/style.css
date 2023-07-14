@@ -139,6 +139,10 @@ nav {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+#service h2{
+    padding-top: 20px;
+}
 #service article{
     width: 30%;
     margin: 10px;
@@ -185,6 +189,8 @@ nav {
 #portfolio h2{
     color: #4E4E4E;
     font-size: 2.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
 } 
 #portfolio p{
     color: #787878;
@@ -229,11 +235,12 @@ nav {
     color: #4E4E4E;
 }
 #map{
-    width: 450px;
-    height: 450px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 2px solid #4E4E4E;
     display: inline-block;
+    margin-bottom: 40px;
 }
 #address{
     display: inline-block;
