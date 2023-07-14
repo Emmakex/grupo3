@@ -3,15 +3,15 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
-    /*line-height: 2rem;*/
 }
- /*Estilos Generales */
 
-/* Inicio Css Header Eduardo */
 body {
     max-width: 1024px;
     margin: 0 auto;    
 }
+ /*Estilos Generales */
+
+/* Inicio Css Header Eduardo */
 
 header {
     background-image: url('../img/header.jpg');
@@ -69,14 +69,7 @@ nav {
 /* Fin Css Header Eduardo */
 
 /* Inicio Who We Are*/
-/*#vertical-bar{
-  width: 1px;
-  height: 85%;
-  left: 50%;
-  top:14%;
-  position: absolute;
-  }*/
-  #vertical-bar{
+#vertical-bar{
     width: 1px;
     height: 80%;
     left: 47.5%;
@@ -84,53 +77,45 @@ nav {
     background-color: lightgrey;
     position: absolute;
     }
-  /*#right {
-    border-left: 1px solid lightgrey;
-  }*/
-  #whoweare h2{
+
+#whoweare h2{
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-   #whoweare{
+    }
+#whoweare{
     /*box-sizing: border-box;*/
     background-color: #faf5f5ce;
     text-align: center;
     position: relative;
-   /* padding-top: 30px;*/
-  }
-  #whoweare h3{
+    }
+#whoweare h3{
     margin-bottom: 30px;
-  }
-  #whoweare article{
+    }
+#whoweare article{
     padding-top: 50px;
     padding-bottom: 20px;
     margin: 10px;}
-  .right-article{
-   display: inline-block;
-   width: 45%;
-   /* padding: 10px;*/
-   text-align: justify;
-   /*padding-top: 30px;*/
-   margin-top:70px;
-   /*letter-spacing:1px;*/
-  }
-  .left-article{
+.right-article{
+    display: inline-block;
+    width: 45%;
+    text-align: justify;
+    margin-top:70px;
+    }
+.left-article{
     display: inline-block;
     width: 40%;
     text-align: justify;
-    /*padding-top: 30px;*/
     margin-top:70px;
-    /*letter-spacing:1px;*/
-   }
-  #left-img{
+    }
+#left-img{
     float: left;
     margin-right: 5px;
-  }
-  #center-img{
-      display: block;
-      margin: 45px auto 45px auto;
-  }
-  /*Fin Who We Are*/
+    }
+#center-img{
+    display: block;
+    margin: 45px auto 45px auto;
+    }
+/*Fin Who We Are*/
 
 /*Servicios*/
 
@@ -150,15 +135,14 @@ nav {
     text-align: justify;
 }
 #service p{
-     font-size: 0.8em;
-    /* text-align: justify;*/
-     line-height: 180%;
-     color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
+    font-size: 0.8em;
+    line-height: 180%;
+    color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
 }
 #service h3{
     padding-top: 20px;
     padding-bottom: 15px;
- }
+    }
 .fa-solid{
     --fa-border-color:lightgrey;
     --fa-border-style: solid;
@@ -288,6 +272,8 @@ nav {
     border: none;
     text-align: left;
     margin-bottom: 10px;
+    height: 35px;
+    padding-left: 5px;
 }
 #containerFormContact textarea{
     display: inline-block;
@@ -298,8 +284,10 @@ nav {
     margin-bottom: 10px;
 }
 #containerFormContact input[type="submit"]{
-    margin: 10px 0px 0px 150px;
+    margin: 10px 0px 0px 10px;
     text-align: center;
+    width: 150px;
+    height: 20px;
     &:hover{
         background-color: #a5a5a5;
     }
