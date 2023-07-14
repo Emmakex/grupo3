@@ -92,7 +92,7 @@ nav {
     padding-bottom: 30px;
   }
    #whoweare{
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     background-color: #faf5f5ce;
     text-align: center;
     position: relative;
@@ -149,7 +149,7 @@ nav {
      font-size: 0.8em;
     /* text-align: justify;*/
      line-height: 180%;
-     color: rgb(87, 85, 85); /color del texto del paragrafo más claro ??/
+     color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
 }
 #service h3{
     padding-top: 20px;
@@ -164,7 +164,7 @@ nav {
     color:#61458c;
     margin-top: 0px;
     margin-bottom: 50px;
-    margin-right: 8px !important;  /la clase fa-pull-left tiene un margin propio/
+    margin-right: 8px !important;  /*la clase fa-pull-left tiene un margin propio*/
     transition-duration: 0.8s;
 }
 .fa-solid:hover {
@@ -210,31 +210,41 @@ nav {
 /* /Portfolio */
 
 /* Contacto */
-.center-align {
+#contact{
+    margin: auto;
     text-align: center;
+    padding: 6%;
 }
-.map {
+#contact h2{
+    margin-bottom: 2%;
+}
+#contact h3{
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+#contact h4{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #4E4E4E;
+}
+#map{
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
-    border: 3px solid #4e4e4e;
-    width: 300px;
-    height: 300px;
-    margin-right: 20px;
-}
-.contact {
-    text-align: center; 
-}
-.container {
-    max-width: 800px;
-    margin: auto;
-    /*position: relative;*/
-}
-.left-element, .right-element {
-    
+    border: 2px solid #4E4E4E;
     display: inline-block;
-    text-align: left;
-    padding: 20px;
-    margin: auto;
 }
+#address{
+    display: inline-block;
+    margin-left: 5%;
+    text-align: left;
+    vertical-align: bottom;
+}
+#address address{
+    margin-bottom: 2em;
+}
+/* Fin Contacto */
 
 /* Formulario de contacto Vicky */
 
