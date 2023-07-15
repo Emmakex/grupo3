@@ -3,16 +3,15 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
-    line-height: 2rem;
+}
+
+body {
+    max-width: 1024px;
+    margin: 0 auto;    
 }
  /*Estilos Generales */
-=======
+
 /* Inicio Css Header Eduardo */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-}
 
 header {
     background-image: url('../img/header.jpg');
@@ -20,20 +19,19 @@ header {
     background-position: center; 
     background-repeat: no-repeat;
     color: #fff;
-    min-height: 600px; 
+    min-height: 480px; 
     position: relative; 
 }
 
 .header-content {
     position: absolute;
     top: 50%;
-    left: 17%;
+    left: 18%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .header-title {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 nav {
@@ -70,99 +68,100 @@ nav {
 }
 /* Fin Css Header Eduardo */
 
-/*Servicios*/
-/*
-h2{
-    font-size: 2em; 
- }
- 
- h3{
-    font-size: 1.5em;
- }
- */
+/* Inicio Who We Are*/
+#vertical-bar{
+    width: 1px;
+    height: 80%;
+    left: 47.5%;
+    top: 20%; /* - --> sube, + --> baja*/
+    background-color: lightgrey;
+    position: absolute;
+    }
 
-/*Inicio Who We Are*/
-
-#weare{
-  padding: 65px;
-  text-align: center;
-}
-
-#weare h2{
-    font-size: 40px;
-}
-
-.containt-weare{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.containt-weare p{
-    width: 65%;
+#whoweare h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    }
+#whoweare{
+    background-color: #faf5f5ce;
     text-align: center;
-}
-
-.cont-description-weare{
-    display: flex;
-    gap:30px;
-}
-
-.container-article {
-    display:inline-block;
-    margin-right: 12px;
-}
-
-
+    position: relative;
+    }
+#whoweare h3{
+    margin-bottom: 30px;
+    }
+#whoweare article{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: 10px;}
+.right-article{
+    display: inline-block;
+    width: 45%;
+    text-align: justify;
+    margin-top:70px;
+    }
+.left-article{
+    display: inline-block;
+    width: 40%;
+    text-align: justify;
+    margin-top:70px;
+    }
+#left-img{
+    float: left;
+    margin-right: 5px;
+    }
+#center-img{
+    display: block;
+    margin: 45px auto 45px auto;
+    }
 /*Fin Who We Are*/
 
- #Service  {
+/*Servicios*/
     text-align: center;
- }
- 
- #Service article {
-    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#service h2{
+    padding-top: 20px;
+}
+#service article{
+    width: 30%;
     margin: 10px;
-    line-height: 110%;
     display: inline-block;
     text-align: justify;
- }
- 
- #Service p{
-     font-size: 0.8em;
-     width: 65%;
-     float: right;
-     margin: 3px 3px 0 0;
- }     
- 
- .fa-solid{
+}
+#service p{
+    font-size: 0.8em;
+    line-height: 180%;
+    color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
+}
+#service h3{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    }
+.fa-solid{
     --fa-border-color:lightgrey;
     --fa-border-style: solid;
-    --fa-border-width: 4px;
+    --fa-border-width: 5px;
     --fa-border-radius: 50%;
     --fa-border-padding:.6em .5em;
     color:#61458c;
-    line-height: 50px;
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-right: 8px !important;  /*la clase fa-pull-left tiene un margin propio*/
     transition-duration: 0.8s;
- }
- 
- .fa-solid:hover {
+}
+.fa-solid:hover {
     background-color:#61458c;
     --fa-border-color:#61458c;
     color:white;
- }
+}
+
+/*Fin Servicios*/
 
 /* Portfolio */
 
-/*
-*{
-    font-family: "Open Sans", sans-serif;
-    line-height: 2rem;    
-}
-*/
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
@@ -171,6 +170,8 @@ h2{
 #portfolio h2{
     color: #4E4E4E;
     font-size: 2.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
 } 
 #portfolio p{
     color: #787878;
@@ -179,7 +180,7 @@ h2{
 }
 .image-center{
     margin: auto;
-    width: 50%;
+    width: 75%;
 }
 .image-center img{
     width: 200px;
@@ -194,6 +195,45 @@ h2{
     border-radius: 50%;
 }
 /* /Portfolio */
+
+/* Contacto */
+#contact{
+    margin: auto;
+    text-align: center;
+    padding: 6%;
+}
+#contact h2{
+    margin-bottom: 2%;
+}
+#contact h3{
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+#contact h4{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #4E4E4E;
+}
+#map{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid #4E4E4E;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+#address{
+    display: inline-block;
+    margin-left: 5%;
+    text-align: left;
+    vertical-align: bottom;
+    margin-bottom: 4em;
+}
+address{
+    padding-bottom: 20px;
+}
+/* Fin Contacto */
 
 /* Formulario de contacto Vicky */
 
@@ -230,6 +270,8 @@ h2{
     border: none;
     text-align: left;
     margin-bottom: 10px;
+    height: 35px;
+    padding-left: 5px;
 }
 #containerFormContact textarea{
     display: inline-block;
@@ -240,8 +282,10 @@ h2{
     margin-bottom: 10px;
 }
 #containerFormContact input[type="submit"]{
-    margin: 10px 0px 0px 150px;
+    margin: 10px 0px 0px 10px;
     text-align: center;
+    width: 150px;
+    height: 20px;
     &:hover{
         background-color: #a5a5a5;
     }
