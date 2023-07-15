@@ -6,7 +6,7 @@
 }
 
 body {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     margin: 0 auto;    
 }
  /*Estilos Generales */
@@ -180,23 +180,28 @@ nav {
     font-size: 1.3rem;
     padding-bottom: 10px;
 }
-.image-center{
+#row{
     margin: auto;
-    width: 75%;
 }
-.image-center img{
+div.col-sm-12{
+    margin-bottom: 5px;
+}
+.col-sm-12 img{
     width: 200px;
     height: 120px;
     transition: all 0.9s ease;
 }
-.image-center img:hover{
-    transform: rotateZ(-8deg);
+
+@media (min-width: 1200px){
+    img.transform:hover{
+        transform: rotateZ(-8deg);
+    }
+    img.rotation:hover{
+        transform: rotate(1turn);
+        border-radius: 50%;
+    }
 }
-.image-center img.rotation:hover{
-    transform: rotate(1turn);
-    border-radius: 50%;
-}
-/* /Portfolio */
+    /* /Portfolio */
 
 /* Contacto */
 #contact{
