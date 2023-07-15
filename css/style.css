@@ -1,28 +1,37 @@
-/* Inicio Css Header Eduardo */
-body {
+/* Estilos Generales */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
+body {
+    max-width: 1024px;
+    margin: 0 auto;    
+}
+ /*Estilos Generales */
+
+/* Inicio Css Header Eduardo */
+
 header {
-    background-image: url('/img/header.jpg');
+    background-image: url('../img/header.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
     color: #fff;
-    min-height: 600px; 
-    position: relative;  
-    align-items: center; 
-    justify-content: left;
+    min-height: 480px; 
+    position: relative; 
 }
 
 .header-content {
-    padding: 100px 20px;
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
 }
 
 .header-title {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 nav {
@@ -58,3 +67,272 @@ nav {
     color: #61458C;  
 }
 /* Fin Css Header Eduardo */
+
+/* Inicio Who We Are*/
+#vertical-bar{
+    width: 1px;
+    height: 80%;
+    left: 47.5%;
+    top: 20%; /* - --> sube, + --> baja*/
+    background-color: lightgrey;
+    position: absolute;
+    }
+
+#whoweare h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    }
+#whoweare{
+    background-color: #faf5f5ce;
+    text-align: center;
+    position: relative;
+    }
+#whoweare h3{
+    margin-bottom: 30px;
+    }
+#whoweare article{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: 10px;}
+.right-article{
+    display: inline-block;
+    width: 45%;
+    text-align: justify;
+    margin-top:70px;
+    }
+.left-article{
+    display: inline-block;
+    width: 40%;
+    text-align: justify;
+    margin-top:70px;
+    }
+#left-img{
+    float: left;
+    margin-right: 5px;
+    }
+#center-img{
+    display: block;
+    margin: 45px auto 45px auto;
+    }
+/*Fin Who We Are*/
+
+/*Servicios*/
+
+#service{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#service h2{
+    padding-top: 20px;
+}
+#service article{
+    width: 30%;
+    margin: 10px;
+    display: inline-block;
+    text-align: justify;
+}
+#service p{
+    font-size: 0.8em;
+    line-height: 180%;
+    color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
+}
+#service h3{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    }
+.fa-solid{
+    --fa-border-color:lightgrey;
+    --fa-border-style: solid;
+    --fa-border-width: 5px;
+    --fa-border-radius: 50%;
+    --fa-border-padding:.6em .5em;
+    color:#61458c;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-right: 8px !important;  /*la clase fa-pull-left tiene un margin propio*/
+    transition-duration: 0.8s;
+}
+.fa-solid:hover {
+    background-color:#61458c;
+    --fa-border-color:#61458c;
+    color:white;
+}
+
+/*Fin Servicios*/
+
+/* Portfolio */
+
+#portfolio{
+    background-color: #F2F2F2;
+    padding: 20px 0 80px;
+    text-align: center;
+}
+#portfolio h2{
+    color: #4E4E4E;
+    font-size: 2.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+} 
+#portfolio p{
+    color: #787878;
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+.image-center{
+    margin: auto;
+    width: 75%;
+}
+.image-center img{
+    width: 200px;
+    height: 120px;
+    transition: all 0.9s ease;
+}
+.image-center img:hover{
+    transform: rotateZ(-8deg);
+}
+.image-center img.rotation:hover{
+    transform: rotate(1turn);
+    border-radius: 50%;
+}
+/* /Portfolio */
+
+/* Contacto */
+#contact{
+    margin: auto;
+    text-align: center;
+    padding: 6%;
+}
+#contact h2{
+    margin-bottom: 2%;
+}
+#contact h3{
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+#contact h4{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #4E4E4E;
+}
+#map{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid #4E4E4E;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+#address{
+    display: inline-block;
+    margin-left: 5%;
+    text-align: left;
+    vertical-align: bottom;
+    margin-bottom: 4em;
+}
+address{
+    padding-bottom: 20px;
+}
+/* Fin Contacto */
+
+/* Formulario de contacto Vicky */
+
+#containerFormContact{
+    background-color: #79629e;
+    background-image: url(../img/map-image.png);
+    min-height: 300px;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    background-size: auto 100%;
+    margin: auto;
+    text-align: center;
+}
+#containerFormContact h2{
+    color: white;
+    margin-bottom: 2%;
+}
+#containerFormContactList{
+    color: white;
+    font-size: 1.4em;
+    width: 500px;
+    margin: auto;
+}
+#containerFormContact label{
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    vertical-align: top;
+}
+#containerFormContact input{
+    display: inline-block;
+    width: 300px;
+    border-radius: 4px;
+    border: none;
+    text-align: left;
+    margin-bottom: 10px;
+    height: 35px;
+    padding-left: 5px;
+}
+#containerFormContact textarea{
+    display: inline-block;
+    width: 300px;
+    border-radius: 4px;
+    border: none;
+    text-align: left;
+    margin-bottom: 10px;
+}
+#containerFormContact input[type="submit"]{
+    margin: 10px 0px 0px 10px;
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    &:hover{
+        background-color: #a5a5a5;
+    }
+}
+/* /Formulario de contacto Vicky */
+/* Footer Vicky */
+footer p{
+    background-color: #61458C;
+    color: #ffffff;
+    margin: 0px;
+    padding: 15px 15px 15px 0;
+    text-align: right;
+}
+footer a{
+    color: #ffffff;
+    &:hover{
+        color: #4e4e4e;
+        background-color: #f2f2f2;
+    }
+}
+/* /Footer Vicky */
+/* Gracias por contactarnos Vicky */
+.mt-4{
+    margin-top: 4%;
+}
+.pt-15{
+    padding-top: 15%;
+}
+.textCenter{
+    text-align: center;
+}
+.thanks{
+    min-height: 95vh;
+}
+.buttonFirst{
+    color:#ffffff;
+    font-size: 1.1em;
+    background-color: #61458C;
+    padding: 1% 2%;
+    border-radius: 10px;
+    text-decoration: none;
+    &:hover{
+        border: 2px solid #61458C;
+        background-color: white;
+        color: #4e4e4e;
+    }
+}
+/* /Gracias por contactarnos Vicky */
