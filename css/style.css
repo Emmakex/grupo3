@@ -46,19 +46,33 @@ header {
         background-image: url('../img/header-mini.png'); 
     }
 }
+
 .header-content {
     position: absolute;
     top: 50%;
-    left: 18%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .header-title {
-    font-size: 16px;
+    font-size: 26px;
+    text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .header-title {
         font-size: 32px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header-content {
+        left: 5%;
+        transform: translateY(-50%);
+    }
+    .header-title {
+        font-size: 32px;
+        text-align: left;
     }
 }
 
@@ -93,6 +107,10 @@ nav {
 }
 .custom-navbar {
     background-color: #61458C;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -157,7 +175,6 @@ nav {
 /*Fin Who We Are*/
 
 /*Servicios*/
-
 #service{
     text-align: center;
     padding-top: 30px;
@@ -167,21 +184,23 @@ nav {
 #service h2{
     padding-top: 20px;
 }
+
 #service article{
-    width: 30%;
     margin: 10px;
-    display: inline-block;
     text-align: justify;
 }
+
 #service p{
     font-size: 0.8em;
     line-height: 180%;
     color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
 }
+
 #service h3{
     padding-top: 20px;
     padding-bottom: 15px;
-    }
+}
+
 .fa-solid{
     --fa-border-color:lightgrey;
     --fa-border-style: solid;
@@ -194,6 +213,7 @@ nav {
     margin-right: 8px !important;  /*la clase fa-pull-left tiene un margin propio*/
     transition-duration: 0.8s;
 }
+
 .fa-solid:hover {
     background-color:#61458c;
     --fa-border-color:#61458c;
@@ -280,8 +300,6 @@ address{
 }
 /* Fin Contacto */
 
-/* Formulario de contacto Vicky */
-
 #containerFormContact{
     background-color: #79629e;
     background-image: url(../img/map-image.png);
@@ -290,52 +308,44 @@ address{
     padding-bottom: 6%;
     background-size: auto 100%;
     margin: auto;
-    text-align: center;
 }
-#containerFormContact h2{
-    color: white;
-    margin-bottom: 2%;
-}
-#containerFormContactList{
-    color: white;
-    font-size: 1.4em;
-    width: 500px;
-    margin: auto;
-}
+
 #containerFormContact label{
     display: block;
-    width: 150px;
     text-align: left;
     vertical-align: top;
 }
-#containerFormContact input{
-    display: inline-block;
-    width: 300px;
-    border-radius: 4px;
-    border: none;
-    text-align: left;
-    margin-bottom: 10px;
-    height: 35px;
-    padding-left: 5px;
-}
-#containerFormContact textarea{
-    display: inline-block;
-    width: 300px;
-    border-radius: 4px;
-    border: none;
-    text-align: left;
-    margin-bottom: 10px;
-}
-#containerFormContact input[type="submit"]{
-    margin: 10px 0px 0px 10px;
-    text-align: center;
-    width: 150px;
-    height: 20px;
-    &:hover{
-        background-color: #a5a5a5;
+
+@media (min-width: 576px) {
+    #containerFormContact {
+      margin: 2em auto;
     }
+  
+    #containerFormContact .form-group {
+      padding: 0.1em;
+    }
+  
+    #containerFormContact .col-form-label {
+      text-align: right;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #containerFormContact .col-form-label {
+      text-align: left;
+    }
+  }
+  
+  .custom-btn {
+    background-color: #efefef;
+    color: #000000; 
+    border: none;
+    margin-top: 0.8em;
 }
-/* /Formulario de contacto Vicky */
+
+.custom-btn:hover {
+    background-color: #838383; 
+}
 /* Footer Vicky */
 footer p{
     background-color: #61458C;

@@ -72,35 +72,50 @@
 <!-- /Quienes Somos -->
 
     
-    <!-- Servicios -->
-    <section id="service">
-        <h2>Our Services</h2>
-        <article>
-            <h3><span class="fa-solid fa-cloud fa-border fa-2x fa-fw fa-pull-left" aria-hidden="true"></span>Service 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
+  <!-- Servicios -->
+<section id="service" class="container my-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <article class="mb-4">
+          <h3><span class="fa-solid fa-cloud fa-border fa-2x fa-fw fa-pull-left mr-3" aria-hidden="true"></span>Service 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
         </article>
-        <article>
-            <h3><span class="fa-solid fa-code fa-border fa-2x fa-fw fa-pull-left" aria-hidden="true"></span>Service 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="mb-4">
+          <h3><span class="fa-solid fa-code fa-border fa-2x fa-fw fa-pull-left mr-3" aria-hidden="true"></span>Service 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
         </article>
-        <article>
-            <h3><span class="fa-solid fa-rss fa-border fa-2x fa-fw fa-pull-left" aria-hidden="true"></span>Service 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="mb-4">
+          <h3><span class="fa-solid fa-rss fa-border fa-2x fa-fw fa-pull-left mr-3" aria-hidden="true"></span>Service 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
         </article>
-        <article>
-            <h3><span class="fa-solid fa-earth-americas fa-border fa-2x fa-fw fa-pull-left" aria-hidden="true"></span>Service 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="mb-4">
+          <h3><span class="fa-solid fa-earth-americas fa-border fa-2x fa-fw fa-pull-left mr-3" aria-hidden="true"></span>Service 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
         </article>
-        <article>
-            <h3><span class="fa-solid fa-flag fa-border fa-2x fa-fw fa-pull-left" aria-hidden="true"></span>Service 5</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="mb-4">
+          <h3><span class="fa-solid fa-flag fa-border fa-2x fa-fw fa-pull-left mr-3" aria-hidden="true"></span>Service 5</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
         </article>
-        <article>
-            <h3><span class="fa-solid fa-cog fa-border fa-2x fa-fw fa-pull-left" aria-hidden="true"></span>Service 6</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="mb-4">
+          <h3><span class="fa-solid fa-cog fa-border fa-2x fa-fw fa-pull-left mr-3" aria-hidden="true"></span>Service 6</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maurius convallis magna sit amet diam euismod malesuada.</p>
         </article>
-    </section>
-<!-- /Servicios-->
+      </div>
+    </div>
+  </section>
+  <!-- /Servicios-->
+  
 
 <!-- Portfolio -->
 <section id="portfolio">
@@ -161,23 +176,51 @@
 </section>
 <!-- /Contacto -->
 
-    <!-- Formulario contacto -->
-    <section id="containerFormContact">
-        <h2>Email Us</h2>
-        <form action="gracias.html" method="post" id="containerFormContactList">
-            <label for="name">Name:* </label>
-            <input type="text" name="name" required id="name">
-            <label for="email">Email:* </label>
-            <input type="email" name="email" required id="email">
-            <label for="phone">Phone: </label>
-            <input type="tel" name="phone" id="phone">
-            <label for="subject">Subject:* </label>
-            <input type="text" name="subject" required id="subject">
-            <label for="message">Message:* </label>
-            <textarea name="message" rows="5" cols="40" id="message"></textarea>
-            <input type="submit" value="Send">
-        </form>
-    </section>
+<!-- Formulario contacto -->
+<section id="containerFormContact" class="container-fluid text-center py-5">
+    <h2 class="text-white">Email Us</h2>
+    <form action="gracias.html" method="post" class="mt-3">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group row my-lg-3">
+                    <label for="name" class="col-sm-4 col-form-label text-white text-sm-right">Name:* </label>
+                    <div class="col-sm-8">
+                        <input type="text" name="name" required id="name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row my-lg-3">
+                    <label for="email" class="col-sm-4 col-form-label text-white text-sm-right">Email:* </label>
+                    <div class="col-sm-8">
+                        <input type="email" name="email" required id="email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row my-lg-3">
+                    <label for="phone" class="col-sm-4 col-form-label text-white text-sm-right">Phone: </label>
+                    <div class="col-sm-8">
+                        <input type="tel" name="phone" id="phone" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row my-lg-3">
+                    <label for="subject" class="col-sm-4 col-form-label text-white text-sm-right">Subject:* </label>
+                    <div class="col-sm-8">
+                        <input type="text" name="subject" required id="subject" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row my-lg-3">
+                    <label for="message" class="col-sm-4 col-form-label text-white text-sm-right">Message:* </label>
+                    <div class="col-sm-8">
+                        <textarea name="message" rows="5" id="message" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row my-lg-3">
+                    <div class="col-sm-8 offset-sm-4">
+                        <input type="submit" value="Send" class="btn custom-btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
 <!-- /Formulario contacto -->
     </main>
     <!-- Pie de página -->
