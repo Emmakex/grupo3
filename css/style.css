@@ -6,14 +6,13 @@
 }
 
 body {
-    max-width: 1024px;
+    /*max-width: 1024px;*/
     margin: 0 auto;    
 }
- /*Estilos Generales */
 
 /* Inicio Css Header Eduardo */
 
-header {
+.header {
     background-image: url('../img/header.jpg');
     background-size: cover;
     background-position: center; 
@@ -31,10 +30,16 @@ header {
 }
 
 .header-title {
-    font-size: 2em;
+    font-size: 12px;
 }
 
-nav {
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 32px;
+    }
+}
+
+.nav-section {
     background-color: #61458C;
     position: absolute; 
     bottom: 0; 
@@ -67,6 +72,7 @@ nav {
     color: #61458C;  
 }
 /* Fin Css Header Eduardo */
+
 
 /* Inicio Who We Are*/
 #vertical-bar{
