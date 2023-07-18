@@ -180,9 +180,11 @@ nav {
     font-size: 1.3rem;
     padding-bottom: 10px;
 }
-#row{
+
+div.marginAuto{
     margin: auto;
 }
+
 div.col-sm-12{
     margin-bottom: 5px;
 }
