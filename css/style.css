@@ -296,7 +296,7 @@ address{
 
 @media (min-width: 576px) {
     #containerFormContact {
-      margin: 2em auto;
+      /*margin: 2em auto;*/
     }
   
     #containerFormContact .form-group {
