@@ -278,52 +278,6 @@ address{
 }
 /* Fin Contacto */
 
-#containerFormContact{
-    background-color: #79629e;
-    background-image: url(../img/map-image.png);
-    min-height: 300px;
-    padding-top: 5%;
-    padding-bottom: 6%;
-    background-size: auto 100%;
-    margin: auto;
-}
-
-#containerFormContact label{
-    display: block;
-    text-align: left;
-    vertical-align: top;
-}
-
-@media (min-width: 576px) {
-    #containerFormContact {
-      /*margin: 2em auto;*/
-    }
-  
-    #containerFormContact .form-group {
-      padding: 0.1em;
-    }
-  
-    #containerFormContact .col-form-label {
-      text-align: right;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    #containerFormContact .col-form-label {
-      text-align: left;
-    }
-  }
-  
-  .custom-btn {
-    background-color: #efefef;
-    color: #000000; 
-    border: none;
-    margin-top: 0.8em;
-}
-
-.custom-btn:hover {
-    background-color: #838383; 
-}
 
 /* Footer Vicky */
 
