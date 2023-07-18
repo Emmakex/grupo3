@@ -119,110 +119,75 @@ nav {
 
 /* Fin Css Header Eduardo */
 
+/*Inicio Who We Are*/
 
-/* Inicio Who We Are*/
-#vertical-bar{
-    width: 1px;
-    height: 80%;
-    left: 47.5%;
-    top: 20%; /* - --> sube, + --> baja*/
-    background-color: lightgrey;
-    position: absolute;
-    }
-
-#whoweare h2{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    }
 #whoweare{
     background-color: #faf5f5ce;
-    text-align: center;
-    position: relative;
-    }
-#whoweare h3{
-    margin-bottom: 30px;
-    }
+}
 #whoweare article{
-    padding-top: 50px;
-    padding-bottom: 20px;
-    margin: 10px;}
-.right-article{
-    display: inline-block;
-    width: 45%;
     text-align: justify;
-    margin-top:70px;
+}
+.border-right {
+    border-right: 1px solid lightgrey;
     }
-.left-article{
-    display: inline-block;
-    width: 40%;
-    text-align: justify;
-    margin-top:70px;
+@media screen and (max-width: 1200px) {
+    .border-right {
+            border-right: 0
     }
-#left-img{
-    float: left;
-    margin-right: 5px;
+    #img-end{
+        display:none;
     }
-#center-img{
-    display: block;
-    margin: 45px auto 45px auto;
-    }
+  }
 
-    @media screen and (min-width: 1200px) {
-        .border-right {
-            border-right: 1px solid lightgrey;;
-        }
-      }
 /*Fin Who We Are*/
 
-/*Servicios*/
-#service{
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+/*Inicio Services*/
 
-#service h2{
-    padding-top: 20px;
-}
-
-#service article{
-    margin: 10px;
-    text-align: justify;
-}
-
+ #service article {
+    text-align: justify;   /*no funciona como class de bootstrap en html???*/
+ }
 #service p{
-    font-size: 0.8em;
-    line-height: 180%;
-    color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
+     font-size: 0.9em;
+     /* line-height: 130%;  */
+     color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
+ }
+ #service h3 {
+   padding-top: 25px;/*titulo más abajo */
 }
-
-#service h3{
-    padding-top: 20px;
-    padding-bottom: 15px;
-}
-
 .fa-solid{
-    --fa-border-color:lightgrey;
-    --fa-border-style: solid;
-    --fa-border-width: 5px;
-    --fa-border-radius: 50%;
-    --fa-border-padding:.6em .5em;
-    color:#61458c;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-right: 8px !important;  /*la clase fa-pull-left tiene un margin propio*/
-    transition-duration: 0.8s;
+    /* margin-top: -15px;  muove el icono más arriba */
+     --fa-border-color:lightgrey;
+     --fa-border-style: solid;
+     --fa-border-width: 5px;
+     --fa-border-radius: 50%;
+     --fa-border-padding:1.1em;
+     color:#61458c;
+     transition-duration: 0.8s;
+     position: relative;
+     /* margin-right: -80px; */ /*acercar icono al paragrafo pero ya no es centrado???*/
+}
+.fa-solid::before {  /*para centrar el icono en circulo*/
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#row{
+    margin:auto;
+}
+@media screen and (min-width: 1200px){
+  .fa-solid:hover {
+     background-color:#61458c;
+     --fa-border-color:#61458c;
+     color:white;
+}
 }
 
-.fa-solid:hover {
-    background-color:#61458c;
-    --fa-border-color:#61458c;
-    color:white;
-}
-
-/*Fin Servicios*/
+/*Fin Services*/
 
 /* Portfolio */
+
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
@@ -259,9 +224,11 @@ div.col-sm-12{
         border-radius: 50%;
     }
 }
-    /* /Portfolio */
+
+/* /Portfolio */
 
 /* Contacto */
+
 #contact{
     margin: auto;
     text-align: center;
@@ -298,6 +265,7 @@ div.col-sm-12{
 address{
     padding-bottom: 20px;
 }
+
 /* Fin Contacto */
 
 #containerFormContact{
@@ -346,7 +314,9 @@ address{
 .custom-btn:hover {
     background-color: #838383; 
 }
+
 /* Footer Vicky */
+
 footer p{
     background-color: #61458C;
     color: #ffffff;
@@ -361,8 +331,11 @@ footer a{
         background-color: #f2f2f2;
     }
 }
+
 /* /Footer Vicky */
+
 /* Gracias por contactarnos Vicky */
+
 .mt-4{
     margin-top: 4%;
 }
@@ -388,4 +361,5 @@ footer a{
         color: #4e4e4e;
     }
 }
+
 /* /Gracias por contactarnos Vicky */
