@@ -5,7 +5,7 @@
     font-family: "Open Sans", sans-serif;
 }
 body {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     margin: 0 auto;
 }
 
@@ -303,56 +303,43 @@ address{
 #containerFormContact{
     background-color: #79629e;
     background-image: url(../img/map-image.png);
-    min-height: 300px;
-    padding-top: 5%;
-    padding-bottom: 6%;
     background-size: auto 100%;
-    margin: auto;
 }
-
 #containerFormContact label{
     display: block;
     text-align: left;
     vertical-align: top;
 }
-
 @media (min-width: 576px) {
-    #containerFormContact {
-      margin: 2em auto;
-    }
-  
+    /* #containerFormContact {
+        margin: 0 auto;
+    } */
     #containerFormContact .form-group {
-      padding: 0.1em;
+        padding: 0.1em;
     }
-  
     #containerFormContact .col-form-label {
-      text-align: right;
+        text-align: right;
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+@media (max-width: 576px) {
     #containerFormContact .col-form-label {
-      text-align: left;
+    text-align: left;
     }
-  }
-  
-  .custom-btn {
+}
+.custom-btn {
     background-color: #efefef;
-    color: #000000; 
+    color: #000000;
     border: none;
     margin-top: 0.8em;
 }
-
 .custom-btn:hover {
-    background-color: #838383; 
+    background-color: #838383;
 }
-/* Footer Vicky */
+/* Footer */
 footer p{
     background-color: #61458C;
     color: #ffffff;
     margin: 0px;
-    padding: 15px 15px 15px 0;
-    text-align: right;
 }
 footer a{
     color: #ffffff;
@@ -361,25 +348,13 @@ footer a{
         background-color: #f2f2f2;
     }
 }
-/* /Footer Vicky */
-/* Gracias por contactarnos Vicky */
-.mt-4{
-    margin-top: 4%;
-}
-.pt-15{
-    padding-top: 15%;
-}
-.textCenter{
-    text-align: center;
-}
-.thanks{
-    min-height: 95vh;
-}
-.buttonFirst{
+/* /Footer */
+/* Gracias por contactarnos */
+.link-btn{
     color:#ffffff;
     font-size: 1.1em;
     background-color: #61458C;
-    padding: 1% 2%;
+    padding: 1em 2em;
     border-radius: 10px;
     text-decoration: none;
     &:hover{
@@ -388,4 +363,4 @@ footer a{
         color: #4e4e4e;
     }
 }
-/* /Gracias por contactarnos Vicky */
+/* /Gracias por contactarnos */
