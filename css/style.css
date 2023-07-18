@@ -224,21 +224,23 @@ div.col-sm-12{
         border-radius: 50%;
     }
 }
+div.marginAuto{
+    margin: auto;
+}
 
 /* /Portfolio */
 
-/* Contacto */
-
+/*CSS Contacto */
 #contact{
     margin: auto;
     text-align: center;
     padding: 6%;
 }
-#contact h2{
+/* #contact h2{
     margin-bottom: 2%;
-}
+} */
 #contact h3{
-    margin-bottom: 3%;
+ /*    margin-bottom: 3%; */
     font-size: 1.4em;
     font-weight: 300;
 }
@@ -252,20 +254,28 @@ div.col-sm-12{
     height: 300px;
     border-radius: 50%;
     border: 2px solid #4E4E4E;
-    display: inline-block;
-    margin-bottom: 40px;
+    /* display: inline-block; */
+    /* margin-bottom: 40px; */
 }
 #address{
-    display: inline-block;
-    margin-left: 5%;
-    text-align: left;
+    /* display: inline-block; */
+    margin-left: 5%;    
     vertical-align: bottom;
-    margin-bottom: 4em;
+    /* margin-bottom: 4em; */
+    text-align: left;
 }
 address{
-    padding-bottom: 20px;
+    padding-block: 10px;
 }
-
+@media (max-width: 768px) {
+    #address {
+        text-align: center;
+        transform: scale(0.7);
+    } 
+    /* iframe {
+        transform: scale(0.8);
+    } Lo usaba para escalar el mapa pero creo que ya no sirve*/
+}
 /* Fin Contacto */
 
 #containerFormContact{
