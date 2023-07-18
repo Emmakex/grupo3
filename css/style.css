@@ -327,49 +327,67 @@ address{
 
 /* Footer Vicky */
 
-footer p{
-    background-color: #61458C;
-    color: #ffffff;
-    margin: 0px;
-    padding: 15px 15px 15px 0;
-    text-align: right;
+#containerFormContact{
+    background-color: #79629E;
+    background-image: url(../img/map-image.png);
+    background-size: auto 100%;
 }
-footer a{
-    color: #ffffff;
-    &:hover{
-        color: #4e4e4e;
-        background-color: #f2f2f2;
+#containerFormContact label{
+    display: block;
+    text-align: left;
+    vertical-align: top;
+}
+@media (min-width: 576px) {
+    /* #containerFormContact {
+        margin: 0 auto;
+    } */
+    #containerFormContact .form-group {
+        padding: 0.1em;
+    }
+    #containerFormContact .col-form-label {
+        text-align: right;
     }
 }
-
-/* /Footer Vicky */
-
-/* Gracias por contactarnos Vicky */
-
-.mt-4{
-    margin-top: 4%;
+@media (max-width: 576px) {
+    #containerFormContact .col-form-label {
+    text-align: left;
+    }
 }
-.pt-15{
-    padding-top: 15%;
+.custom-btn {
+    background-color: #EFEFEF;
+    color: #000000;
+    border: none;
+    margin-top: 0.8em;
 }
-.textCenter{
-    text-align: center;
+.custom-btn:hover {
+    background-color: #838383;
 }
-.thanks{
-    min-height: 95vh;
+/* Footer */
+footer p{
+    background-color: #61458C;
+    color: #FFFFFF;
+    margin: 0px;
 }
-.buttonFirst{
+footer a{
+    color: #FFFFFF;
+    &:hover{
+        color: #4E4E4E;
+        background-color: #F2F2F2;
+    }
+}
+/* /Footer */
+/* Gracias por contactarnos */
+.link-btn{
     color:#ffffff;
     font-size: 1.1em;
     background-color: #61458C;
-    padding: 1% 2%;
+    padding: 1em 2em;
     border-radius: 10px;
     text-decoration: none;
     &:hover{
         border: 2px solid #61458C;
         background-color: white;
-        color: #4e4e4e;
+        color: #4E4E4E;
     }
 }
-
-/* /Gracias por contactarnos Vicky */
+/* /Gracias por contactarnos */
