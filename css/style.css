@@ -1,15 +1,16 @@
 /*Estilos Generales */
 
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
 }
 
-body {
-    max-width: 1024px;
-    margin: 0 auto;
-}
 
 @media screen and (max-width: 767px) {
     body {
@@ -39,9 +40,13 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #f4f2f2;
+    color: #fff;
     min-height: 480px;
     position: relative;
+}
+
+h1{
+    color: #dbd9d9;
 }
 
 @media screen and (max-width: 768px) { 
@@ -133,33 +138,12 @@ nav {
     background-color: #faf5f5ce;
 }
 
-#whoweare p{
-    text-align: left;
-}
-
-.border-right {
-    border-right: 1px solid lightgrey;
-}
-
-@media screen and (max-width: 1200px) {
-    .border-right {
-            border-right: 0
-    }
-    #img-end{
-        display:none;
-    }
-}
-
-/*Fin Who We Are*/
-
-/*Inicio Who We Are*/
-
-#whoweare{
-    background-color: #faf5f5ce;
-}
-
 #whoweare article{
     text-align: justify;
+}
+
+#whoweare .row p{
+    text-align: left;
 }
 
 .border-right {
@@ -180,7 +164,7 @@ nav {
 /*Inicio Services*/
 
 #service article {
-    text-align: left;  /* no funciona como class de bootstrap en html???*/
+    text-align: left;
 }
 
 #service p{
@@ -236,7 +220,7 @@ nav {
 }
 
 #portfolio p{
-    color: #6c6b6b;
+    color: #605f5f;
     font-size: 1.3rem;
     padding-bottom: 10px;
 }
@@ -343,14 +327,14 @@ address{
     }
 }
 
-.custom-btn {
+#containerFormContact .custom-btn {
     background-color: #EFEFEF;
     color: #000000;
     border: none;
     margin-top: 0.8em;
 }
 
-.custom-btn:hover {
+#containerFormContact .custom-btn:hover {
     background-color: #838383;
 }
 
