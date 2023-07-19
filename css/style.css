@@ -141,21 +141,38 @@ nav {
 
 /*Fin Who We Are*/
 
-/*Inicio Services*/
+/*Inicio Who We Are*/
+#whoweare{
+    background-color: #faf5f5ce;
+}
+#whoweare article{
+    text-align: justify;
+}
+.border-right {
+    border-right: 1px solid lightgrey;
+}
+@media screen and (max-width: 1200px) {
+    .border-right {
+            border-right: 0
+    }
+    #img-end{
+        display:none;
+    }
+  }
+/*Fin Who We Are*/
 
- #service article {
-    text-align: justify;   /*no funciona como class de bootstrap en html???*/
- }
+/*Inicio Services*/
+#service article {
+    text-align: justify;  /* no funciona como class de bootstrap en html???*/
+}
 #service p{
      font-size: 0.9em;
-     /* line-height: 130%;  */
      color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
  }
  #service h3 {
    padding-top: 25px;/*titulo más abajo */
 }
 .fa-solid{
-    /* margin-top: -15px;  muove el icono más arriba */
      --fa-border-color:lightgrey;
      --fa-border-style: solid;
      --fa-border-width: 5px;
@@ -164,26 +181,20 @@ nav {
      color:#61458c;
      transition-duration: 0.8s;
      position: relative;
-     /* margin-right: -80px; */ /*acercar icono al paragrafo pero ya no es centrado???*/
 }
-.fa-solid::before {  /*para centrar el icono en circulo*/
-    content: "";
+.fa-solid::before {     /* pseudoclass ::before para centrar el icono dentro del círculo.*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-#row{
-    margin:auto;
 }
 @media screen and (min-width: 1200px){
   .fa-solid:hover {
      background-color:#61458c;
      --fa-border-color:#61458c;
      color:white;
+    }
 }
-}
-
 /*Fin Services*/
 
 /* Portfolio */
