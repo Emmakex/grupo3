@@ -1,34 +1,37 @@
 /*Estilos Generales */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-}
+
 body {
     max-width: 1024px;
     margin: 0 auto;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+
 @media screen and (max-width: 767px) {
     body {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
-    .header-title {
-      font-size: 1.5em;
-    }
-  
-    #whoweare .left-article, #whoweare .right-article {
-      font-size: 0.8em;
-    }
-  }
 
-  img {
+    .header-title {
+        font-size: 1.5em;
+    }
+
+    #whoweare .left-article, #whoweare .right-article {
+        font-size: 0.8em;
+    }
+}
+
+img {
     max-width: 100%;
     height: auto;
 }
 
-/*Estilos Generales */
+/* /Estilos Generales */
 
 /* Inicio Css Header Eduardo */
 header {
@@ -119,86 +122,48 @@ nav {
 
 /* Fin Css Header Eduardo */
 
+/*Inicio Who We Are*/
 
-/* Inicio Who We Are*/
-#vertical-bar{
-    width: 1px;
-    height: 80%;
-    left: 47.5%;
-    top: 20%; /* - --> sube, + --> baja*/
-    background-color: lightgrey;
-    position: absolute;
-    }
-
-#whoweare h2{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    }
 #whoweare{
     background-color: #faf5f5ce;
-    text-align: center;
-    position: relative;
-    }
-#whoweare h3{
-    margin-bottom: 30px;
-    }
-#whoweare article{
-    padding-top: 50px;
-    padding-bottom: 20px;
-    margin: 10px;}
-.right-article{
-    display: inline-block;
-    width: 45%;
-    text-align: justify;
-    margin-top:70px;
-    }
-.left-article{
-    display: inline-block;
-    width: 40%;
-    text-align: justify;
-    margin-top:70px;
-    }
-#left-img{
-    float: left;
-    margin-right: 5px;
-    }
-#center-img{
-    display: block;
-    margin: 45px auto 45px auto;
-    }
+}
 
-    @media screen and (min-width: 1200px) {
-        .border-right {
-            border-right: 1px solid lightgrey;;
-        }
-      }
+#whoweare article{
+    text-align: justify;
+}
+
+#whoweare .row p{
+    text-align: left;
+}
+
+.border-right {
+    border-right: 1px solid lightgrey;
+}
+
+@media screen and (max-width: 1200px) {
+    .border-right {
+            border-right: 0
+    }
+    #img-end{
+        display:none;
+    }
+}
+
 /*Fin Who We Are*/
 
-/*Servicios*/
-#service{
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+/*Inicio Services*/
 
-#service h2{
-    padding-top: 20px;
-}
-
-#service article{
-    margin: 10px;
-    text-align: justify;
+#service article {
+    text-align: left;
 }
 
 #service p{
-    font-size: 0.8em;
-    line-height: 180%;
+    font-size: 0.9em;
     color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
 }
 
-#service h3{
-    padding-top: 20px;
-    padding-bottom: 15px;
+#service h3 {
+   padding-top: 25px;/*titulo más abajo */
 }
 
 .fa-solid{
@@ -206,50 +171,60 @@ nav {
     --fa-border-style: solid;
     --fa-border-width: 5px;
     --fa-border-radius: 50%;
-    --fa-border-padding:.6em .5em;
+    --fa-border-padding:1.1em;
     color:#61458c;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-right: 8px !important;  /*la clase fa-pull-left tiene un margin propio*/
     transition-duration: 0.8s;
+    position: relative;
 }
 
-.fa-solid:hover {
-    background-color:#61458c;
-    --fa-border-color:#61458c;
-    color:white;
+.fa-solid::before {     /* pseudoclass ::before para centrar el icono dentro del círculo.*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/*Fin Servicios*/
+@media screen and (min-width: 1200px){
+    .fa-solid:hover {
+        background-color:#61458c;
+        --fa-border-color:#61458c;
+        color:white;
+    }
+}
 
-/* Portfolio */
+/*Fin Services*/
+
+/* Inicio Portfolio */
+
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
     text-align: center;
 }
+
 #portfolio h2{
     color: #4E4E4E;
     font-size: 2.5rem;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
 #portfolio p{
-    color: #787878;
+    color: #605f5f;
     font-size: 1.3rem;
     padding-bottom: 10px;
 }
-#row{
+.marginAuto{
     margin: auto;
+    width: 75%;
 }
-div.col-sm-12{
-    margin-bottom: 5px;
-}
+
 .col-sm-12 img{
     width: 200px;
     height: 120px;
     transition: all 0.9s ease;
 }
+
 @media (min-width: 1200px){
     img.transform:hover{
         transform: rotateZ(-8deg);
@@ -259,64 +234,66 @@ div.col-sm-12{
         border-radius: 50%;
     }
 }
-    /* /Portfolio */
 
-/* Contacto */
+div.marginAuto{
+    margin: auto;
+}
+
+/* /Portfolio */
+
+/*CSS Contacto */
+
 #contact{
     margin: auto;
     text-align: center;
     padding: 6%;
 }
-/* #contact h2{
-    margin-bottom: 2%;
-} */
+
 #contact h3{
- /*    margin-bottom: 3%; */
     font-size: 1.4em;
     font-weight: 300;
 }
+
 #contact h4{
     font-size: 1.3em;
     margin-bottom: 0.5em;
     color: #4E4E4E;
 }
+
 #map{
     width: 300px;
     height: 300px;
     border-radius: 50%;
     border: 2px solid #4E4E4E;
-    /* display: inline-block; */
-    /* margin-bottom: 40px; */
 }
+
 #address{
-    /* display: inline-block; */
+
     margin-left: 5%;    
     vertical-align: bottom;
-    /* margin-bottom: 4em; */
     text-align: left;
 }
+
 address{
     padding-block: 10px;
 }
+
 @media (max-width: 768px) {
-    #address {
+    #address{
         text-align: center;
         transform: scale(0.7);
-    } 
-    /* iframe {
-        transform: scale(0.8);
-    } Lo usaba para escalar el mapa pero creo que ya no sirve*/
+    }
 }
+
 /* Fin Contacto */
 
+
+/* Footer Vicky */
+
 #containerFormContact{
-    background-color: #79629e;
+    background-color: #79629E;
     background-image: url(../img/map-image.png);
-    min-height: 300px;
-    padding-top: 5%;
-    padding-bottom: 6%;
     background-size: auto 100%;
-    margin: auto;
 }
 
 #containerFormContact label{
@@ -326,75 +303,62 @@ address{
 }
 
 @media (min-width: 576px) {
-    #containerFormContact {
-      margin: 2em auto;
-    }
-  
     #containerFormContact .form-group {
-      padding: 0.1em;
+        padding: 0.1em;
     }
-  
     #containerFormContact .col-form-label {
-      text-align: right;
+        text-align: right;
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     #containerFormContact .col-form-label {
-      text-align: left;
+    text-align: left;
     }
-  }
-  
-  .custom-btn {
-    background-color: #efefef;
-    color: #000000; 
+}
+
+#containerFormContact .custom-btn {
+    background-color: #EFEFEF;
+    color: #000000;
     border: none;
     margin-top: 0.8em;
 }
-
-.custom-btn:hover {
-    background-color: #838383; 
+#containerFormContact .custom-btn:hover {
+    background-color: #838383;
 }
-/* Footer Vicky */
+
+/* Footer */
+
 footer p{
     background-color: #61458C;
-    color: #ffffff;
+    color: #FFFFFF;
     margin: 0px;
-    padding: 15px 15px 15px 0;
-    text-align: right;
 }
+
 footer a{
-    color: #ffffff;
+    color: #FFFFFF;
     &:hover{
-        color: #4e4e4e;
-        background-color: #f2f2f2;
+        color: #4E4E4E;
+        background-color: #F2F2F2;
     }
 }
-/* /Footer Vicky */
-/* Gracias por contactarnos Vicky */
-.mt-4{
-    margin-top: 4%;
-}
-.pt-15{
-    padding-top: 15%;
-}
-.textCenter{
-    text-align: center;
-}
-.thanks{
-    min-height: 95vh;
-}
-.buttonFirst{
+
+/* /Footer */
+
+/* Gracias por contactarnos */
+
+.link-btn{
     color:#ffffff;
     font-size: 1.1em;
     background-color: #61458C;
-    padding: 1% 2%;
+    padding: 1em 2em;
     border-radius: 10px;
     text-decoration: none;
     &:hover{
         border: 2px solid #61458C;
         background-color: white;
-        color: #4e4e4e;
+        color: #4E4E4E;
     }
 }
-/* /Gracias por contactarnos Vicky */
+
+/* /Gracias por contactarnos */
