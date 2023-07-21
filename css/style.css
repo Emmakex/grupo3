@@ -11,21 +11,6 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-
-@media screen and (max-width: 767px) {
-    body {
-        font-size: 18px;
-    }
-
-    .header-title {
-        font-size: 1.5em;
-    }
-
-    #whoweare .left-article, #whoweare .right-article {
-        font-size: 0.8em;
-    }
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -42,12 +27,6 @@ header {
     color: #fff;
     min-height: 480px;
     position: relative;
-}
-
-@media screen and (max-width: 768px) { 
-    header {
-        background-image: url('../img/header-mini.png'); 
-    }
 }
 
 .header-content {
@@ -146,9 +125,7 @@ nav {
     .border-right {
             border-right: 0
     }
-    #img-end{
-        display:none;
-    }
+
 }
 
 /*Fin Who We Are*/
@@ -161,7 +138,6 @@ nav {
 
 #service p{
     font-size: 0.9em;
-    color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
 }
 
 #service h3 {
@@ -364,3 +340,25 @@ footer a{
 }
 
 /* /Gracias por contactarnos */
+
+/* Medias */
+
+@media screen and (max-width: 767px) {
+    /*General*/
+    body {
+        font-size: 18px;
+    }
+
+    .header-title {
+        font-size: 1.5em;
+    }
+
+    #whoweare .left-article, #whoweare .right-article {
+        font-size: 0.8em;
+    }
+    /*Header*/
+}header {
+    background-image: url('../img/header-mini.png'); 
+}
+
+/* Fin Medias */
