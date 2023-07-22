@@ -20,7 +20,7 @@ body {
         font-size: 1.5em;
     }
 
-    #whoweare .left-article, #whoweare .right-article {
+    #whoweare article {
         font-size: 0.8em;
     }
 }
@@ -33,7 +33,6 @@ img {
 /* /Estilos Generales */
 
 /* Inicio Css Header Eduardo */
-
 header {
     background-image: url('../img/header.jpg');
     background-size: cover;
@@ -42,10 +41,6 @@ header {
     color: #fff;
     min-height: 480px;
     position: relative;
-}
-
-h1{
-    color: #dbd9d9;
 }
 
 @media screen and (max-width: 768px) { 
@@ -90,19 +85,16 @@ nav {
     width: 100%;
     padding: 20px 0;
 }
-
 .nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: left;
 }
-
 .nav-list li {
     display: inline;
     margin: 0 20px;
 }
-
 .nav-link {
     text-decoration: none;
     color: #FFFFFF !important;
@@ -111,14 +103,15 @@ nav {
     border-radius: 5px;
     margin: 10px;
 }
-
 .nav-link:hover {
     background-color: #fff;
     color: #61458C !important;
 }
-
 .custom-navbar {
     background-color: #61458C;
+}
+.navbar{
+    position: absolute;
 }
 
 /* Fin Css Header Eduardo */
@@ -269,20 +262,25 @@ div.marginAuto{
 }
 
 #address{
-
+    padding-top: 40px;
     margin-left: 5%;    
     vertical-align: bottom;
-    text-align: left;
+    text-align: center;
 }
 
-address{
-    padding-block: 10px;
+.embed-responsive-item{
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
     #address{
-        text-align: center;
+        padding-top: 20px;
         transform: scale(0.7);
+    }
+}
+@media (min-width: 995px){
+    #address{
+        text-align: left;
     }
 }
 
@@ -324,7 +322,6 @@ address{
     border: none;
     margin-top: 0.8em;
 }
-
 #containerFormContact .custom-btn:hover {
     background-color: #838383;
 }
