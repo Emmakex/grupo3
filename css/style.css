@@ -41,11 +41,6 @@ header {
     text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header-title {
-        font-size: 32px;
-    }
-}
 
 @media (min-width: 1025px) {
     .header-content {
@@ -123,9 +118,9 @@ nav {
 
 @media screen and (max-width: 1200px) {
     .border-right {
-            border-right: 0
+        border-right: 0
     }
-
+    
 }
 
 /*Fin Who We Are*/
@@ -141,7 +136,7 @@ nav {
 }
 
 #service h3 {
-   padding-top: 25px;/*titulo más abajo */
+    padding-top: 25px;/*titulo más abajo */
 }
 
 .fa-solid{
@@ -246,22 +241,22 @@ div.marginAuto{
 }
 
 #address{
-
+    
     margin-left: 5%;    
     vertical-align: bottom;
-    text-align: left;
+    text-align: center;
+    padding-top: 40px;
+}
+.embed-responsive-item{
+    margin-top: 20px;
 }
 
-address{
-    padding-block: 10px;
-}
-
-@media (max-width: 768px) {
+@media (min-width:995px) {
     #address{
-        text-align: center;
-        transform: scale(0.7);
+        text-align: left;
     }
 }
+
 
 /* Fin Contacto */
 
@@ -283,15 +278,6 @@ address{
 @media (min-width: 576px) {
     #containerFormContact .form-group {
         padding: 0.1em;
-    }
-    #containerFormContact .col-form-label {
-        text-align: right;
-    }
-}
-
-@media (max-width: 576px) {
-    #containerFormContact .col-form-label {
-    text-align: left;
     }
 }
 
@@ -323,42 +309,37 @@ footer a{
 
 /* /Footer */
 
-/* Gracias por contactarnos */
-
-.link-btn{
-    color:#ffffff;
-    font-size: 1.1em;
-    background-color: #61458C;
-    padding: 1em 2em;
-    border-radius: 10px;
-    text-decoration: none;
-    &:hover{
-        border: 2px solid #61458C;
-        background-color: white;
-        color: #4E4E4E;
-    }
-}
-
-/* /Gracias por contactarnos */
-
-/* Medias */
+/* Medias hasta 767*/
 
 @media screen and (max-width: 767px) {
     /*General*/
     body {
         font-size: 18px;
     }
-
+    
     .header-title {
         font-size: 1.5em;
     }
-
+    
     #whoweare .left-article, #whoweare .right-article {
         font-size: 0.8em;
     }
     /*Header*/
-}header {
-    background-image: url('../img/header-mini.png'); 
+    header {
+        background-image: url('../img/header-mini.png'); 
+    }
+    /*Contact*/
+    #address{
+        padding-top: 20px;
+        transform: scale(0.7);
+    }
 }
-
 /* Fin Medias */
+
+/* Medias hasta 1280*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-title {
+        font-size: 32px;
+    }
+}
