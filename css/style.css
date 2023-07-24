@@ -89,7 +89,7 @@ nav {
     background-color: #faf5f5ce;
 }
 .border-vr{
-    border-right: 1px solid blue;
+    border-right: 1px solid lightgrey;
 }
 @media screen and (max-width: 1200px) {
     .border-vr{
