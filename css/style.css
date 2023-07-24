@@ -19,7 +19,7 @@ img {
 
 /* Inicio Css Header Eduardo */
 header {
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header-mini.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -292,24 +292,20 @@ footer a{
 
 /* /Footer */
 
-/* Medias hasta 767*/
+/* Medias hasta 768*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     /*General*/
     body {
         font-size: 18px;
     }
-    
+    /*Header*/
     .header-title {
         font-size: 1.5em;
     }
     
     #whoweare .left-article, #whoweare .right-article {
         font-size: 0.8em;
-    }
-    /*Header*/
-    header {
-        background-image: url('../img/header-mini.png'); 
     }
     /*Contact*/
     #address{
@@ -321,8 +317,17 @@ footer a{
 
 /* Medias hasta 1280*/
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
+    /*Header*/
     .header-title {
         font-size: 32px;
+        text-align: left;
+    }
+}
+/* Medias desde 1280*/
+@media (min-width: 1280px) {
+    /*Header*/
+    header {
+        background-image: url('../img/header.jpg'); 
     }
 }
