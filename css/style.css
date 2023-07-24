@@ -19,7 +19,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    min-height: 480px;
+    min-height: 600px;
     position: relative;
 }
 .header-content {
@@ -88,11 +88,14 @@ nav {
 #whoweare{
     background-color: #faf5f5ce;
 }
+.border-vr{
+    border-right: 1px solid blue;
+}
 @media screen and (max-width: 1200px) {
-    .border-right {
-        border-right: 0
+    .border-vr{
+        border: 0;
     }
-} 
+}  
 /*Fin Who We Are*/
 /*Inicio Services*/
 #service p{
@@ -107,7 +110,7 @@ nav {
     color:#61458c;
     transition-duration: 0.8s;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 110px;
 }
 .fa-solid::before {     /* pseudoclass ::before para centrar el icono dentro del círculo.*/
     position: absolute;
@@ -271,8 +274,8 @@ body {
         text-align: left;
     }
 }
-/* Medias desde 1280*/
-@media (min-width: 1280px) {
+/* Medias desde 1200*/
+@media (min-width: 1200px) {
     /*Header*/
     header {
         background-image: url('../img/header.jpg'); 
