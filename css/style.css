@@ -1,22 +1,17 @@
 /*Estilos Generales */
-
 body {
     margin: 0 auto;
 }
-
 * {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 /* /Estilos Generales */
-
 /* Inicio Css Header Eduardo */
 header {
     background-image: url('../img/header-mini.png');
@@ -27,20 +22,16 @@ header {
     min-height: 480px;
     position: relative;
 }
-
 .header-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .header-title {
     font-size: 26px;
     text-align: center;
 }
-
-
 @media (min-width: 1025px) {
     .header-content {
         left: 5%;
@@ -51,7 +42,6 @@ header {
         text-align: left;
     }
 }
-
 nav {
     background-color: #61458C;
     position: absolute;
@@ -84,11 +74,9 @@ nav {
 .custom-navbar {
     background-color: #61458C;
 }
-
 .navbar-light .navbar-toggler {
     border-color: #ffffff;
 }
-
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -96,21 +84,16 @@ nav {
     position:absolute;
 }
 /* Fin Css Header Eduardo */
-
 /*Inicio Who We Are*/
-
 #whoweare{
     background-color: #faf5f5ce;
 }
-
 @media screen and (max-width: 1200px) {
     .border-right {
         border-right: 0
     }
-    
 } 
 /*Fin Who We Are*/
-
 /*Inicio Services*/
 #service p{
     font-size: 0.9em;
@@ -126,14 +109,12 @@ nav {
     position: relative;
     margin-bottom: 120px;
 }
-
 .fa-solid::before {     /* pseudoclass ::before para centrar el icono dentro del círculo.*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 @media screen and (min-width: 1200px){
     .fa-solid:hover {
         background-color:#61458c;
@@ -146,25 +127,19 @@ nav {
         margin-right: 3em;
     }
 }
-
-
 /*Fin Services*/
-
 /* Inicio Portfolio */
-
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
     text-align: center;
 }
-
 #portfolio h2{
     color: #4E4E4E;
     font-size: 2.5rem;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
 #portfolio p{
     color: #605f5f;
     font-size: 1.3rem;
@@ -174,13 +149,11 @@ nav {
     margin: auto;
     width: 75%;
 }
-
 .col-sm-12 img{
     width: 200px;
     height: 120px;
     transition: all 0.9s ease;
 }
-
 @media (min-width: 1200px){
     img.transform:hover{
         transform: rotateZ(-8deg);
@@ -190,39 +163,31 @@ nav {
         border-radius: 50%;
     }
 }
-
 div.marginAuto{
     margin: auto;
 }
-
 /* /Portfolio */
-
 /*CSS Contacto */
-
 #contact{
     margin: auto;
     text-align: center;
     padding: 6%;
 }
-
 #contact h3{
     font-size: 1.4em;
     font-weight: 300;
 }
-
 #contact h4{
     font-size: 1.3em;
     margin-bottom: 0.5em;
     color: #4E4E4E;
 }
-
 #map{
     width: 300px;
     height: 300px;
     border-radius: 50%;
     border: 2px solid #4E4E4E;
 }
-
 #address{
     
     margin-left: 5%;    
@@ -233,37 +198,28 @@ div.marginAuto{
 .embed-responsive-item{
     margin-top: 20px;
 }
-
 @media (min-width:995px) {
     #address{
         text-align: left;
     }
 }
-
-
 /* Fin Contacto */
-
-
 /* Footer Vicky */
-
 #containerFormContact{
     background-color: #79629E;
     background-image: url(../img/map-image.png);
     background-size: auto 100%;
 }
-
 #containerFormContact label{
     display: block;
     text-align: left;
     vertical-align: top;
 }
-
 @media (min-width: 576px) {
     #containerFormContact .form-group {
         padding: 0.1em;
     }
 }
-
 #containerFormContact .custom-btn {
     background-color: #EFEFEF;
     color: #000000;
@@ -273,15 +229,12 @@ div.marginAuto{
 #containerFormContact .custom-btn:hover {
     background-color: #838383;
 }
-
 /* Footer */
-
 footer p{
     background-color: #61458C;
     color: #FFFFFF;
     margin: 0px;
 }
-
 footer a{
     color: #FFFFFF;
     &:hover{
@@ -289,34 +242,28 @@ footer a{
         background-color: #F2F2F2;
     }
 }
-
 /* /Footer */
-
 /* Medias hasta 768*/
-
 @media screen and (max-width: 768px) {
-    /*General*/
-    body {
-        font-size: 18px;
-    }
-    /*Header*/
-    .header-title {
-        font-size: 1.5em;
-    }
-    
-    #whoweare .left-article, #whoweare .right-article {
-        font-size: 0.8em;
-    }
-    /*Contact*/
-    #address{
-        padding-top: 20px;
-        transform: scale(0.7);
-    }
+/*General*/
+body {
+    font-size: 18px;
+}
+/*Header*/
+.header-title {
+    font-size: 1.5em;
+}
+#whoweare .left-article, #whoweare .right-article {
+    font-size: 0.8em;
+}
+/*Contact*/
+#address{
+    padding-top: 20px;
+    transform: scale(0.7);
+}
 }
 /* Fin Medias */
-
 /* Medias hasta 1280*/
-
 @media (min-width: 768px) {
     /*Header*/
     .header-title {
