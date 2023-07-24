@@ -1,7 +1,6 @@
 /*Estilos Generales */
 
 body {
-    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -104,50 +103,28 @@ nav {
     background-color: #faf5f5ce;
 }
 
-#whoweare article{
-    text-align: justify;
-}
-
-#whoweare .row p{
-    text-align: left;
-}
-
-.border-right {
-    border-right: 1px solid lightgrey;
-}
-
 @media screen and (max-width: 1200px) {
     .border-right {
         border-right: 0
     }
     
-}
-
+} 
 /*Fin Who We Are*/
 
 /*Inicio Services*/
-
-#service article {
-    text-align: left;
-}
-
 #service p{
     font-size: 0.9em;
 }
-
-#service h3 {
-    padding-top: 25px;/*titulo más abajo */
-}
-
 .fa-solid{
     --fa-border-color:lightgrey;
     --fa-border-style: solid;
     --fa-border-width: 5px;
     --fa-border-radius: 50%;
-    --fa-border-padding:1.1em;
+    --fa-border-padding:1em;
     color:#61458c;
     transition-duration: 0.8s;
     position: relative;
+    margin-bottom: 120px;
 }
 
 .fa-solid::before {     /* pseudoclass ::before para centrar el icono dentro del círculo.*/
@@ -164,6 +141,12 @@ nav {
         color:white;
     }
 }
+@media screen and (min-width: 768px){
+    .me-md-7{
+        margin-right: 3em;
+    }
+}
+
 
 /*Fin Services*/
 
