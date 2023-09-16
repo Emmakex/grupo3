@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (event.key === "5") {
         const containerFormContactSection = document.getElementById("containerFormContact");
         
-        if (containerFormContact) {
+        if (containerFormContactSection) {
           const containerFormContactTop = containerFormContactSection.getBoundingClientRect().top;
           
           window.scrollTo({
