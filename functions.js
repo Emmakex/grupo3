@@ -20,4 +20,24 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+ 
+// Service
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("keydown", function(event) {
+
+      if (event.key === "2") {
+        const serviceSection = document.getElementById("service");
+        
+        if (serviceSection) {
+          const serviceTop = serviceSection.getBoundingClientRect().top;
+          
+          window.scrollTo({
+            top: serviceTop,
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+  });
   
