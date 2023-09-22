@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("section");
   
     document.addEventListener("keydown", function(event) {
+      
+      if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") {
+        return;
+      }
+  
       if (event.key === "a") {
         currentSectionIndex = Math.max(0, currentSectionIndex - 1);
       } else if (event.key === "b") {
