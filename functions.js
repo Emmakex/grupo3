@@ -14,19 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
         currentSectionIndex = Math.max(0, currentSectionIndex - 1);
       } else if (event.key === "b") {
         currentSectionIndex = Math.min(sections.length - 1, currentSectionIndex + 1);
-      } else if (event.key >= "1" && event.key <= "5") {
-        const sectionId = event.key === "1" ? "whoweare" :
-                          event.key === "2" ? "service" :
-                          event.key === "3" ? "portfolio" :
-                          event.key === "4" ? "contact" :
-                          event.key === "5" ? "containerFormContact" : null;
-  
-        if (sectionId) {
-          const targetSection = document.getElementById(sectionId);
-  
-          if (targetSection) {
+      } else {
+        let targetSection = document.querySelector(`section[data-key="${event.key}"]`);  
+        if (targetSection) {
             currentSectionIndex = Array.from(sections).indexOf(targetSection);
-          }
         }
       }
   
@@ -43,4 +34,51 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+  function element(tag, options, children) {
+    let {classNames: classNames, ...atributs} = options;
+
+    const el = document.createElement(tag);
+    for (const child of children) {
+        el.append(child);
+    }
+    for (const className of classNames || []) {
+        el.classList.add(className);
+    }
+    for (const atributName in atributs) {
+      el.setAttribute(atributName, atributs[atributName]);
+    }
+    return el;
+}
+
+function createModal()  {
+  
+  let titulos = [...document.querySelectorAll('section[data-key]')]
+
+  .map(section => {
+    const key = section.dataset.key
+    const title = section.querySelector('h2').textContent
+    return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title])
+  })
+
+  let modal = element('div', {classNames: ['modal', 'show']}, [
+    element('div', {classNames: ['modal-dialog']}, [
+      element('div', {classNames: ['modal-content']}, [
+        element('div', {classNames: ['modal-header']}, [
+          element('h5', {classNames: ['modal-title']}, ['Ayuda']), 
+          element('button', {classNames: ['btn-close'], type: 'button'}, [])
+        ]),
+        element('div', {classNames: ['modal-body']}, [
+          element('ul', {classNames : ['list-group']}, titulos)
+        ])
+      ])
+    ])
+  ]);
+  return modal;
+}
+
+function addModal(){
+  let modalToAdd = createModal();
+  document.body.appendChild(modalToAdd);
+}
+setTimeout(addModal, 1000)
   

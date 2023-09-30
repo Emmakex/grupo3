@@ -281,3 +281,7 @@ body {
         background-image: url('../img/header.jpg'); 
     }
 }
+
+.modal {
+    display: block;
+}
