@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
         currentSectionIndex = Math.min(sections.length - 1, currentSectionIndex + 1);
       } else if (event.key === "h") {
         addModal();
+      }else if (event.key === "Escape") {
+          closeModal();
       } else {
         let targetSection = document.querySelector(`section[data-key="${event.key}"]`);  
         if (targetSection) {
@@ -95,9 +97,3 @@ function closeModal(){
     modalToClose[0].remove();
   }
 }
-
-document.onkeydown = function(tecla) {
-  if (tecla.keyCode == 27) {
-    closeModal();
-  }
-};
