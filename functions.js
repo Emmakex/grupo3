@@ -1,99 +1,107 @@
-// Teclas 1 - 5 y a - b
+// Captura tecla pulsada y hace funciones según si la tecla es 1 - 5, a - b -h -  Escape
 
 document.addEventListener("DOMContentLoaded", function() {
     let currentSectionIndex = 0;
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section"); // Captura las secciones
   
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function(event) { // Captura la tecla pulsada
       
-      if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") {
+      if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") { // Si está activo el input o el textarea sale de la función
         return;
       }
   
-      if (event.key === "a") {
-        currentSectionIndex = Math.max(0, currentSectionIndex - 1);
-      } else if (event.key === "b") {
-        currentSectionIndex = Math.min(sections.length - 1, currentSectionIndex + 1);
-      } else if (event.key === "h") {
-        addModal();
-      }else if (event.key === "Escape") {
-          closeModal();
+      if (event.key === "a") { // Si la tecla pulsada es a
+        currentSectionIndex = Math.max(0, currentSectionIndex - 1); // Resta uno al índice al que hará scroll
+      } else if (event.key === "b") { // Si la tecla pulsada es b
+        currentSectionIndex = Math.min(sections.length - 1, currentSectionIndex + 1); // Añade uno al índice al que hará scroll
+      } else if (event.key === "h") { // Si la tecla pulsada es h
+        addModal(); // Abrirá el modal de ayuda
+      }else if (event.key === "Escape") { // Si la letra pulsada es Escape
+          closeModal(); // Cerrará el modal de ayuda
       } else {
-        let targetSection = document.querySelector(`section[data-key="${event.key}"]`);  
+        let targetSection = document.querySelector(`section[data-key="${event.key}"]`); // Captura la sección del número pulsado, si la hay 
         if (targetSection) {
-            currentSectionIndex = Array.from(sections).indexOf(targetSection);
+            currentSectionIndex = Array.from(sections).indexOf(targetSection); // Si hay sección buscará el indexOf de esa sección
         }
       }
-      const targetSection = sections[currentSectionIndex];
-      console.log(targetSection.offsetTop)
-      let sectionTop = '0';
+      const targetSection = sections[currentSectionIndex]; // Guarda la sección a la que ir
+      let sectionTop = '0'; // El párametro de top al que hará scroll, predefinido en 0 para que suba arriba del todo
       if (targetSection) {
-        if(targetSection.offsetTop != '300'){
-          sectionTop = targetSection.offsetTop;
+        if(targetSection.offsetTop != '300'){ // Si el offSetTop no es 300, porque 300 es el offSetTop del inicio y tiene que suir hasta arriba
+          sectionTop = targetSection.offsetTop; // Guarda el offSetTop de esa sección para aplicarlo después
         }
   
-        window.scrollTo({
-          top: sectionTop,
+        window.scrollTo({ // Hacer scroll en la ventana
+          top: sectionTop, // Hasta la posición que le indicamos
           behavior: "smooth"
         });
       }
     });
   });
   
-  function element(tag, options, children) {
-    let {classNames: classNames, ...atributs} = options;
 
-    const el = document.createElement(tag);
-    for (const child of children) {
-        el.append(child);
+  // Función para crear elementos
+
+  function element(tag, options, children) { // Le pasaremos la etiqueta de lo que queremos crear, después los atributos  y los hijos
+    let {classNames: classNames, ...atributs} = options; 
+
+    const el = document.createElement(tag); // Guardará que elemento vamos a crear en una variable
+    for (const child of children) { // Recorrerá los hijos que queremos añadir
+        el.append(child); // Los añadirá al padre
     }
-    for (const className of classNames || []) {
-        el.classList.add(className);
+    for (const className of classNames || []) { // Recorrerá las clases que queramos
+        el.classList.add(className); //Añadirá las clases
     }
-    for (const atributName in atributs) {
-      el.setAttribute(atributName, atributs[atributName]);
+    for (const atributName in atributs) { // Recorrerá el resto de atributos
+      el.setAttribute(atributName, atributs[atributName]); // Y los añadirá
     }
-    return el;
+    return el; // Devuelve el elemento creado
 }
+
+// Función para crear el modal de ayuda
 
 function createModal()  {
   
-  let titulos = [...document.querySelectorAll('section[data-key]')]
+  let titulos = [...document.querySelectorAll('section[data-key]')] // Captura las secciones que saldrán en el modal
 
-  .map(section => {
-    if(section.dataset.key != 0){
-      const key = section.dataset.key
-      const title = section.querySelector('h2').textContent
-      return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title])
+  .map(section => { // Recorre las secciones para crear los li de la ul de secciones
+    if(section.dataset.key != 0){ // Si la sección no es 0
+      const key = section.dataset.key // Captura el data key
+      const title = section.querySelector('h2').textContent // Captura el título
+      return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title]) // Crea el elemento li usando la función de crear elementos hecha antes, añadiendo la clase y el hijo creando un elemento nuevo con el parámetro de la variable key para el número de sección y el título de la misma
     }
   })
 
-  let modal = element('div', {classNames: ['modal', 'show']}, [
+  let modal = element('div', {classNames: ['modal', 'show']}, [ // Creamos el modal con la función de crear elementos
     element('div', {classNames: ['modal-dialog']}, [
       element('div', {classNames: ['modal-content']}, [
         element('div', {classNames: ['modal-header']}, [
           element('h5', {classNames: ['modal-title']}, ['Ayuda']), 
-          element('button', {classNames: ['btn-close'], type: 'button'}, [])
+          element('button', {classNames: ['btn-close'], type: 'button', onclick: 'closeModal()'}, [])
         ]),
         element('div', {classNames: ['modal-body']}, [
-          element('ul', {classNames : ['list-group']}, titulos)
+          element('ul', {classNames : ['list-group']}, titulos) // Creamos la lista de secciones usando los titulos de antes
         ])
       ])
     ])
   ]);
-  return modal;
+  return modal; // devuelve el modal construido
 }
+
+// Funcion para añadir modal al segundo de cargar la página y quitarlo a los 5 segundos
 
 function addModal(){
-  let modalToAdd = createModal();
-  document.body.appendChild(modalToAdd);
+  let modalToAdd = createModal(); // Llama a la función para crear el modal
+  document.body.appendChild(modalToAdd); // Lo añade al documento
 }
-setTimeout(addModal, 1000)
-setTimeout(closeModal, 5000)
+setTimeout(addModal, 1000) // Para que se visualice en pantalla al segundo de cargar la página
+setTimeout(closeModal, 5000) // Para que desaparezca a los 5 segundos
+
+// Función para cerrar el modal
 
 function closeModal(){
-  let modalToClose = document.getElementsByClassName("modal");
-  if(modalToClose.length > 0) {
-    modalToClose[0].remove();
+  let modalToClose = document.getElementsByClassName("modal"); // Captura el modal
+  if(modalToClose.length > 0) { // Si la array es más larga de 0, o sea, contiene un modal
+    modalToClose[0].remove(); // Quita el primer elemento de la array (el modal)
   }
 }
