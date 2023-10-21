@@ -85,4 +85,17 @@ function addModal(){
   document.body.appendChild(modalToAdd);
 }
 setTimeout(addModal, 1000)
-  
+setTimeout(closeModal, 5000)
+
+function closeModal(){
+  let modalToClose = document.getElementsByClassName("modal");
+  if(modalToClose.length > 0) {
+    modalToClose[0].remove();
+  }
+}
+
+document.onkeydown = function(tecla) {
+  if (tecla.keyCode == 27) {
+    closeModal();
+  }
+};
