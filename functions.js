@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const targetSection = sections[currentSectionIndex]; // Guarda la sección a la que ir
       let sectionTop = '0'; // El párametro de top al que hará scroll, predefinido en 0 para que suba arriba del todo
       if (targetSection) {
-        if(targetSection.offsetTop != '300'){ // Si el offSetTop no es 300, porque 300 es el offSetTop del inicio y tiene que suir hasta arriba
+        if(targetSection.offsetTop != '300'){ // Si el offSetTop no es 300, porque 300 es el offSetTop del inicio y tiene que subir hasta arriba
           sectionTop = targetSection.offsetTop; // Guarda el offSetTop de esa sección para aplicarlo después
         }
   
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function element(tag, options, children) { // Le pasaremos la etiqueta de lo que queremos crear, después los atributos  y los hijos
     let {classNames: classNames, ...atributs} = options; 
 
-    const el = document.createElement(tag); // Guardará que elemento vamos a crear en una variable
+    const el = document.createElement(tag); // Guardará qué elemento vamos a crear en una variable
     for (const child of children) { // Recorrerá los hijos que queremos añadir
         el.append(child); // Los añadirá al padre
     }
@@ -68,16 +68,16 @@ function createModal()  {
     if(section.dataset.key != 0){ // Si la sección no es 0
       const key = section.dataset.key // Captura el data key
       const title = section.querySelector('h2').textContent // Captura el título
-      return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title]) // Crea el elemento li usando la función de crear elementos hecha antes, añadiendo la clase y el hijo creando un elemento nuevo con el parámetro de la variable key para el número de sección y el título de la misma
+      return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title]) // Crea el elemento li usando la función de crear elementos hecha antes, añadiendo la clase y el hijo que será un elemento nuevo con el parámetro de la variable key para el número de sección y el título de la misma
     }
   })
 
   let modal = element('div', {classNames: ['modal', 'show']}, [ // Creamos el modal con la función de crear elementos
-    element('div', {classNames: ['modal-dialog']}, [
+    element('div', {classNames: ['modal-dialog']}, [ // Diferentes div con clases
       element('div', {classNames: ['modal-content']}, [
         element('div', {classNames: ['modal-header']}, [
-          element('h5', {classNames: ['modal-title']}, ['Ayuda']), 
-          element('button', {classNames: ['btn-close'], type: 'button', onclick: 'closeModal()'}, [])
+          element('h5', {classNames: ['modal-title']}, ['Ayuda']), // El título del modal
+          element('button', {classNames: ['btn-close'], type: 'button', onclick: 'closeModal()'}, []) // El botón para cerrar la ventana
         ]),
         element('div', {classNames: ['modal-body']}, [
           element('ul', {classNames : ['list-group']}, titulos) // Creamos la lista de secciones usando los titulos de antes
