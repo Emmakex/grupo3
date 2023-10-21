@@ -20,11 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
             currentSectionIndex = Array.from(sections).indexOf(targetSection);
         }
       }
-  
       const targetSection = sections[currentSectionIndex];
-  
+      console.log(targetSection.offsetTop)
+      let sectionTop = '0';
       if (targetSection) {
-        const sectionTop = targetSection.offsetTop;
+        if(targetSection.offsetTop != '300'){
+          sectionTop = targetSection.offsetTop;
+        }
   
         window.scrollTo({
           top: sectionTop,
@@ -55,9 +57,11 @@ function createModal()  {
   let titulos = [...document.querySelectorAll('section[data-key]')]
 
   .map(section => {
-    const key = section.dataset.key
-    const title = section.querySelector('h2').textContent
-    return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title])
+    if(section.dataset.key != 0){
+      const key = section.dataset.key
+      const title = section.querySelector('h2').textContent
+      return element('li', {classNames : ['list-group-item']}, [element('kbd', {}, [key]), ' ', title])
+    }
   })
 
   let modal = element('div', {classNames: ['modal', 'show']}, [
