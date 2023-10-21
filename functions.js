@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         currentSectionIndex = Math.max(0, currentSectionIndex - 1);
       } else if (event.key === "b") {
         currentSectionIndex = Math.min(sections.length - 1, currentSectionIndex + 1);
+      } else if (event.key === "h") {
+        addModal();
       } else {
         let targetSection = document.querySelector(`section[data-key="${event.key}"]`);  
         if (targetSection) {
