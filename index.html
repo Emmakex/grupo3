@@ -12,7 +12,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="functions.js"></script>
+        <script async src="./app.js"></script>
         <title>Grupo 3</title>
     </head>
     <body class="mx-auto">
@@ -197,6 +200,48 @@
         </div>
     </section>
 <!-- /Contacto -->
+<!-- Pokemon -->
+<template id="pokemon-template">
+    <div class="card" 
+                style="width: 18rem;">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" data-source="sprites.front_default" class="card-img-top" alt="bulvasaur front">
+            <div class="card-body">
+                <h5 class="card-title text-capitalize" data-source="name">bulbasaur</h5>
+                <p class="card-text">Moves: razor-wind, swords-dance, cut, bind... </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">hp: 
+                    <div data-source="stats.hp" class="progress" 
+                            role="progressbar" 
+                            aria-label="Success example" 
+                            aria-valuenow="45" 
+                            aria-valuemin="0" 
+                            aria-valuemax="100">
+
+                        <div class="progress-bar bg-success" 
+                            style="width: 45%">valor dinamico</div>
+                      </div>
+                </li>
+                <li class="list-group-item" >attack: 
+                    <meter data-source="stats.attack" 
+                    title="49"
+                            min="0" 
+                            max="100" 
+                            low="33" 
+                            high="66"
+                            optimum="80" 
+                            value="49">at <span>49</span>/100</meter>    
+                </li>
+                <li class="list-group-item">defense: <span>49</span> </li>
+                <li class="list-group-item">speed: <span>45</span> </li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+</template>
+<!--/ Pokemon -->
 
 <!-- Formulario contacto -->
     <section id="containerFormContact" class="container-fluid text-center py-5 mx-auto" data-key="5">
