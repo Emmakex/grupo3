@@ -76,10 +76,11 @@ function createModal()  {
     element('div', {classNames: ['modal-dialog']}, [ // Diferentes div con clases
       element('div', {classNames: ['modal-content']}, [
         element('div', {classNames: ['modal-header']}, [
-          element('h5', {classNames: ['modal-title']}, ['Ayuda']), // El título del modal
+          element('h5', {classNames: ['modal-title']}, ['Help']), // El título del modal
           element('button', {classNames: ['btn-close'], type: 'button', onclick: 'closeModal()'}, []) // El botón para cerrar la ventana
         ]),
-        element('div', {classNames: ['modal-body']}, [
+        element('div', {classNames: ['modal-body']}, [element('p', {classNames: ['ms-2', 'fs-5']}, ['Select 1-5 to jump to webpage sections.']), // El título del modal
+
           element('ul', {classNames : ['list-group']}, titulos) // Creamos la lista de secciones usando los titulos de antes
         ])
       ])
