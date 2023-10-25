@@ -1,3 +1,4 @@
+// Pokemon
 async function fetchPokemon() {
     let id = Math.ceil(Math.random()*1000)
     let url = `https://pokeapi.co/api/v2/pokemon/${id}`
@@ -14,7 +15,7 @@ const NAME = `[data-source="name"]`
 function addPokemon(pokemon) {
 
         let simpleStats = {}
-        
+
         for (const {stat,base_stat} of pokemon.stats){
             simpleStats[stat.name] = base_stat
         }
@@ -31,27 +32,8 @@ function addPokemon(pokemon) {
     let clone = template.content.cloneNode(true)
 
     clone.querySelector(FRONT).src = pokemon.sprites.front_default
-    clone.querySelector(NAME).innerText = pokemon.name
-    clone
-        .querySelector(`[data-source="stats.attack"]`)
-        .value = simpleStats.attack
-        //pokemon.stats.find(item => item.stat.name=="attack").base_stat
+    clone.querySelector(NAME).innerText = pokemon.name 
         console.log(simpleStats)
-
-    let hp = pokemon.stats.find(item => item.stat.name == "hp").base_stat
-
-    let hpProgress = clone.querySelector(`[data-source="stats.hp"]`)
-
-    let hpProgressBar = hpProgress.firstElementChild
-
-    hpProgressBar.innerText = hp
-    hpProgressBar.style.width = `${hp}%`
-    console.log(hp)
-
-    hpProgress.setAttribute("aria-valuenow", hp)
-
-
-
     document.querySelector("#APItarget").appendChild(clone)
 }
 
@@ -61,3 +43,6 @@ async function setPokemon() {
 }
 
 setTimeout(setPokemon, 1000)
+
+// /Pokemon
+
