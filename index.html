@@ -201,63 +201,70 @@
     </section>
 <!-- /Contacto -->
 
-<!-- Pokemon -->
-    <section id="APItarget">
-        <template id="pokemon-template">
-            <div class="card" style="width: 18rem;">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" data-source="sprites.front_default" class="card-img-top" alt="bulvasaur front">
-                    <div class="card-body">
-                        <h5 class="card-title text-capitalize" data-source="name">bulbasaur</h5>
-                    </div>
-                </div>
-        </template>
-    </section>
-<!--/ Pokemon -->
-
 <!-- Formulario contacto -->
     <section id="containerFormContact" class="container-fluid text-center py-5 mx-auto" data-key="5">
         <h2 class="fw-bold text-white">Email Us</h2>
-        <form action="gracias.html" method="post" class="mt-3">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="form-group row my-lg-3">
-                        <label for="name" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Name:* </label>
-                        <div class="col-sm-10 col-md-9">
-                            <input type="text" name="name" required id="name" class="form-control">
+        <div class="row">
+            <div class="col-sm-12 col-md-9 col-lg-9">
+                <form action="gracias.html" method="post" class="mt-3">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8 col-lg-offset-1">
+                            <div class="form-group row my-lg-3">
+                                <label for="name" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Name:* </label>
+                                <div class="col-sm-10 col-md-9">
+                                    <input type="text" name="name" required id="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row my-lg-3">
+                                <label for="email" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Email:* </label>
+                                <div class="col-sm-10 col-md-9">
+                                    <input type="email" name="email" required id="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row my-lg-3">
+                                <label for="phone" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Phone: </label>
+                                <div class="col-sm-10 col-md-9">
+                                    <input type="tel" name="phone" id="phone" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row my-lg-3">
+                                <label for="subject" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Subject:* </label>
+                                <div class="col-sm-10 col-md-9">
+                                    <input type="text" name="subject" required id="subject" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row my-lg-3">
+                                <label for="message" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Message:* </label>
+                                <div class="col-sm-10 col-md-9">
+                                    <textarea name="message" rows="5" id="message" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row my-lg-3">
+                                <div class="col-sm-9 offset-sm-3">
+                                    <input type="submit" value="Send" class="btn custom-btn">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group row my-lg-3">
-                        <label for="email" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Email:* </label>
-                        <div class="col-sm-10 col-md-9">
-                            <input type="email" name="email" required id="email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row my-lg-3">
-                        <label for="phone" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Phone: </label>
-                        <div class="col-sm-10 col-md-9">
-                            <input type="tel" name="phone" id="phone" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row my-lg-3">
-                        <label for="subject" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Subject:* </label>
-                        <div class="col-sm-10 col-md-9">
-                            <input type="text" name="subject" required id="subject" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row my-lg-3">
-                        <label for="message" class="col-sm-2 col-md-3 col-form-label text-white text-sm-right">Message:* </label>
-                        <div class="col-sm-10 col-md-9">
-                            <textarea name="message" rows="5" id="message" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row my-lg-3">
-                        <div class="col-sm-9 offset-sm-3">
-                            <input type="submit" value="Send" class="btn custom-btn">
-                        </div>
-                    </div>
+                </form>
+            </div>
+<!-- Pokemon -->
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <div id="APItarget">
+                    <template id="pokemon-template">
+                        <div class="pokemon-figure">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" data-source="sprites.front_default" class="card-img-top" alt="bulvasaur front">
+                                <div class="card-body">
+                                    <h5 class="displayI">Hola 👋 te saluda</h5>
+                                    <h5 class="card-title text-capitalize displayI" data-source="name">bulbasaur</h5>
+                                    <h5>¡no olvides rellenar el formulario!</h5>
+                                </div>
+                            </div>
+                    </template>
                 </div>
             </div>
-        </form>
+<!--/ Pokemon -->
+        </div>
     </section>
 <!-- /Formulario contacto -->
     </main>

@@ -207,7 +207,7 @@ div.marginAuto{
     }
 }
 /* Fin Contacto */
-/* Footer Vicky */
+/* Formulario */
 #containerFormContact{
     background-color: #79629E;
     background-image: url(../img/map-image.png);
@@ -232,6 +232,15 @@ div.marginAuto{
 #containerFormContact .custom-btn:hover {
     background-color: #838383;
 }
+/* Pokemon */
+.pokemon-figure{
+    width: 100%;
+    color: #F2F2F2;
+}
+.displayI{
+    display: inline;
+}
+/* /Pokemon */
 /* Footer */
 footer p{
     background-color: #61458C;
