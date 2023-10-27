@@ -237,6 +237,9 @@ div.marginAuto{
     width: 100%;
     color: #F2F2F2;
 }
+.pokemon-figure img {
+    height: auto !important;
+}
 .displayI{
     display: inline;
 }
