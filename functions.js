@@ -106,3 +106,4 @@ function closeModal(){
     modalToClose[0].remove(); // Quita el primer elemento de la array (el modal)
   }
 }
+
