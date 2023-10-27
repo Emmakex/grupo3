@@ -85,52 +85,48 @@ nav {
 }
 /* Fin Css Header Eduardo */
 /* API clima */  
-  .container {
+
+.container {
     width: 80%;
     margin: 30px auto;
-  }
-  
-  h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .weather-container {
-    overflow: hidden;
-    position: relative;
-    height: 50px;
-    margin-top: 20px;
-  }
-  
-  .weather-bar {
-    display: flex;
-    transition: transform 1s ease-in-out;
-  }
-  
-  .weather-section {
-    flex: 0 0 33.333%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-  .close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 10px;
-  }
-  
-  .close-btn:hover {
-    background-color: #e1e1e1;
-  }
+}
+h1 {
+font-size: 2em;
+margin-bottom: 10px;
+}
+.weather-container {
+overflow: hidden;
+position: relative;
+height: 50px;
+margin-top: 20px;
+}
+.weather-bar {
+display: flex;
+transition: transform 1s ease-in-out;
+}
+.weather-section {
+flex: 0 0 33.333%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 100%;
+padding: 0 10px;
+box-sizing: border-box;
+}
+.close-btn {
+position: absolute;
+top: 0;
+right: 0;
+background-color: transparent;
+border: none;
+font-size: 24px;
+cursor: pointer;
+padding: 0 10px;
+}
+.close-btn:hover {
+background-color: #E1E1E1;
+}
 /* Fin API clima */
 /*Inicio Who We Are*/
 #whoweare{
@@ -143,7 +139,27 @@ nav {
     .border-vr{
         border: 0;
     }
-}  
+} 
+.container-trivia {
+    width: 300px;
+    height: 200px;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    float: right;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+#question-container {
+    margin-top: 20px;
+}
+#question {
+    font-weight: bold;
+}
+#answer {
+    color: #555;
+} 
 /*Fin Who We Are*/
 /*Inicio Services*/
 #service p{
@@ -381,3 +397,11 @@ kbd {
     text-align: center;
     margin-right: 5px;
 }
+
+.visible {
+    visibility: visible;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }

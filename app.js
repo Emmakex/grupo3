@@ -46,12 +46,11 @@ setTimeout(setPokemon, 1000)
 
 // /Pokemon
 
-// API clima
+// API weather
 
 async function getWeatherData(lat, lon) {
     const apiKey = 'ce6c8eb34f770f7657e93083ab35e5a0';
-    const url = https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey};
-  
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
     try {
       const response = await fetch(url);
       const jsonData = await response.json();
@@ -64,20 +63,17 @@ async function getWeatherData(lat, lon) {
       document.getElementById('weather-container').textContent = 'Error al cargar datos del clima';
     }
   }
-  
   function updateWeatherBar(temperature, humidity, windSpeed) {
-    document.getElementById('temperature').querySelector('span').textContent = ${temperature}°C;
-    document.getElementById('humidity').querySelector('span').textContent = ${humidity}%;
-    document.getElementById('wind').querySelector('span').textContent = ${windSpeed} m/s;
-  
+    document.getElementById('temperature').querySelector('span').textContent = `${temperature}°C`;
+    document.getElementById('humidity').querySelector('span').textContent = `${humidity}%`;
+    document.getElementById('wind').querySelector('span').textContent = `${windSpeed} m/s`;
     const weatherBar = document.getElementById('weather-bar');
     let position = 0;
     setInterval(() => {
       position = (position + 1) % 3;
-      weatherBar.style.transform = translateX(${-33.333 * position}%);
+      weatherBar.style.transform = `translateX(${-33.333 * position}%)`;
     }, 3000);
   }
-  
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(async position => {
@@ -91,10 +87,29 @@ async function getWeatherData(lat, lon) {
       document.getElementById('weather-container').textContent = 'Este navegador no admite la geolocalización.';
     }
   }
-  getLocation();
-  
-  document.getElementById('close-btn').addEventListener('click', () => {
-    document.getElementById('weather-container').style.display = 'none';
-  });
+  getLocation(); 
 
-//   /API clima
+  document.getElementById('close-btn-weather').addEventListener('click', () => {
+    document.getElementById('weather-bar').classList.toggle('invisible');
+    console.log(document.getElementById('weather-bar'))
+  });
+  
+
+//   /API weather
+
+// API Trivia
+
+async function getRandomQuestion() {
+    try {
+        const response = await fetch('https://jservice.io/api/random');
+        const data = await response.json();
+        const question = data[0].question;
+        const answer = data[0].answer;
+        document.getElementById('question').innerText = 'Question: ' + question;
+        document.getElementById('answer').innerText = 'Answer: ' + answer;
+    } catch (error) {
+        console.error('Error con la pregunta aleatoria:', error);
+        document.getElementById('question').innerText = 'No carga la pregunta';
+    }
+}
+// /Api Trivia
