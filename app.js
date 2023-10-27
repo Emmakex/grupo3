@@ -46,3 +46,55 @@ setTimeout(setPokemon, 1000)
 
 // /Pokemon
 
+// API clima
+
+async function getWeatherData(lat, lon) {
+    const apiKey = 'ce6c8eb34f770f7657e93083ab35e5a0';
+    const url = https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey};
+  
+    try {
+      const response = await fetch(url);
+      const jsonData = await response.json();
+      const temperature = jsonData.main.temp;
+      const humidity = jsonData.main.humidity;
+      const windSpeed = jsonData.wind.speed;
+      updateWeatherBar(temperature, humidity, windSpeed);
+    } catch (error) {
+      console.error(error);
+      document.getElementById('weather-container').textContent = 'Error al cargar datos del clima';
+    }
+  }
+  
+  function updateWeatherBar(temperature, humidity, windSpeed) {
+    document.getElementById('temperature').querySelector('span').textContent = ${temperature}°C;
+    document.getElementById('humidity').querySelector('span').textContent = ${humidity}%;
+    document.getElementById('wind').querySelector('span').textContent = ${windSpeed} m/s;
+  
+    const weatherBar = document.getElementById('weather-bar');
+    let position = 0;
+    setInterval(() => {
+      position = (position + 1) % 3;
+      weatherBar.style.transform = translateX(${-33.333 * position}%);
+    }, 3000);
+  }
+  
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(async position => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        getWeatherData(lat, lon);
+      }, () => {
+        document.getElementById('weather-container').textContent = 'Error al obtener tu ubicación.';
+      });
+    } else {
+      document.getElementById('weather-container').textContent = 'Este navegador no admite la geolocalización.';
+    }
+  }
+  getLocation();
+  
+  document.getElementById('close-btn').addEventListener('click', () => {
+    document.getElementById('weather-container').style.display = 'none';
+  });
+
+//   /API clima

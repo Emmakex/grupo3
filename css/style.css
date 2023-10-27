@@ -84,6 +84,54 @@ nav {
     position:absolute;
 }
 /* Fin Css Header Eduardo */
+/* API clima */  
+  .container {
+    width: 80%;
+    margin: 30px auto;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .weather-container {
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    margin-top: 20px;
+  }
+  
+  .weather-bar {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .weather-section {
+    flex: 0 0 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  
+  .close-btn:hover {
+    background-color: #e1e1e1;
+  }
+/* Fin API clima */
 /*Inicio Who We Are*/
 #whoweare{
     background-color: #faf5f5ce;
