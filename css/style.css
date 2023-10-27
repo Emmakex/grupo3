@@ -127,6 +127,14 @@ padding: 0 10px;
 .close-btn:hover {
 background-color: #E1E1E1;
 }
+.fa-thermometer-three-quarters, .fa-tint, .fa-wind {
+    color: #61458c;
+    width: 2rem;
+    font-size: 1.5rem;
+}
+.fa-wind {
+    padding-left: 0.3rem;
+}
 /* Fin API clima */
 /*Inicio Who We Are*/
 #whoweare{
@@ -397,11 +405,3 @@ kbd {
     text-align: center;
     margin-right: 5px;
 }
-
-.visible {
-    visibility: visible;
-  }
-  
-  .hidden {
-    visibility: hidden;
-  }

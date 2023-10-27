@@ -1,48 +1,49 @@
 // Pokemon
-async function fetchPokemon() {
-    let id = Math.ceil(Math.random()*1000)
-    let url = `https://pokeapi.co/api/v2/pokemon/${id}`
 
-    let response = await fetch(url)
-    let data = await response.json()
-    console.log(data)
-    return data
+// Función para llamar a un pokemon
+async function fetchPokemon() { // Llamada a la API 
+    let id = Math.ceil(Math.random()*1000) // Creación de número aleatorio para llamar a un pokemon
+    let url = `https://pokeapi.co/api/v2/pokemon/${id}` // Llamada al pokemon con id aleatorio
+
+    let response = await fetch(url) // Url del Pokemon
+    let data = await response.json() // datos del pokemon
+    return data // Devuelve los datos del Pokemon
 }
 
-const FRONT = `[data-source="sprites.front_default"]`
-const NAME = `[data-source="name"]`
+const FRONT = `[data-source="sprites.front_default"]` // Variable para guardar el string a buscar más adelante
+const NAME = `[data-source="name"]` // Variable para guardar el string a buscar más adelante
 
-function addPokemon(pokemon) {
 
-        let simpleStats = {}
+// Función para crear la tarjeta del pokemon
+function addPokemon(pokemon) { 
 
-        for (const {stat,base_stat} of pokemon.stats){
-            simpleStats[stat.name] = base_stat
+        let simpleStats = {} // Creación de variable de objetos vacía
+
+        for (const {stat,base_stat} of pokemon.stats){ // Recorre los stats del pokemon y guarda stat y base_stat
+          simpleStats[stat.name] = base_stat // Añade la key de stat.name con el valor de base_stat
         }
 
         let otherSimpleStats = [...pokemon.stats]
-            .reduce(
+            .reduce( // Pasa la key del objeto (stat.name) a un atributo llamado key, y el valor de la key (base_stat) a un atributo value
                 (acc, item) => acc.set(item.stat.name, item.base_stat),
                 new Map()
             )
 
-        console.log(otherSimpleStats)
+    let template = document.querySelector("#pokemon-template") // Captura el template
+    let clone = template.content.cloneNode(true) 
 
-    let template = document.querySelector("#pokemon-template")
-    let clone = template.content.cloneNode(true)
-
-    clone.querySelector(FRONT).src = pokemon.sprites.front_default
-    clone.querySelector(NAME).innerText = pokemon.name 
-        console.log(simpleStats)
-    document.querySelector("#APItarget").appendChild(clone)
+    clone.querySelector(FRONT).src = pokemon.sprites.front_default // Clona el div del template y le añade la url del pokemon
+    clone.querySelector(NAME).innerText = pokemon.name // Cambia el texto del template por el nombre del pokemon
+    document.querySelector("#APItarget").appendChild(clone) // añade el clone al template
 }
 
+// Función para llamar a la API y invocar a la función de crear pokemon
 async function setPokemon() {
-    let pokemon = await fetchPokemon()
-    addPokemon(pokemon)
+    let pokemon = await fetchPokemon() // Llama a la API
+    addPokemon(pokemon) // añade el pokemon
 }
 
-setTimeout(setPokemon, 1000)
+setTimeout(setPokemon, 1000) // Al segundo de cargar la página crea el pokemon
 
 // /Pokemon
 
@@ -70,8 +71,8 @@ async function getWeatherData(lat, lon) {
     const weatherBar = document.getElementById('weather-bar');
     let position = 0;
     setInterval(() => {
-      position = (position + 1) % 3;
-      weatherBar.style.transform = `translateX(${-33.333 * position}%)`;
+        position = (position + 1) % 3;
+        weatherBar.style.transform = `translateX(${-33.333 * position}%)`;
     }, 3000);
   }
   function getLocation() {
