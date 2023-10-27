@@ -1,73 +1,37 @@
 /*Estilos Generales */
-
 body {
-    max-width: 1024px;
     margin: 0 auto;
 }
-
 * {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
 }
-
-
-@media screen and (max-width: 767px) {
-    body {
-        font-size: 18px;
-    }
-
-    .header-title {
-        font-size: 1.5em;
-    }
-
-    #whoweare .left-article, #whoweare .right-article {
-        font-size: 0.8em;
-    }
-}
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 /* /Estilos Generales */
-
 /* Inicio Css Header Eduardo */
 header {
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header-mini.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    min-height: 480px;
+    min-height: 600px;
     position: relative;
 }
-
-@media screen and (max-width: 768px) { 
-    header {
-        background-image: url('../img/header-mini.png'); 
-    }
-}
-
 .header-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .header-title {
     font-size: 26px;
     text-align: center;
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header-title {
-        font-size: 32px;
-    }
-}
-
 @media (min-width: 1025px) {
     .header-content {
         left: 5%;
@@ -78,7 +42,6 @@ header {
         text-align: left;
     }
 }
-
 nav {
     background-color: #61458C;
     position: absolute;
@@ -111,11 +74,9 @@ nav {
 .custom-navbar {
     background-color: #61458C;
 }
-
 .navbar-light .navbar-toggler {
     border-color: #ffffff;
 }
-
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -123,69 +84,40 @@ nav {
     position:absolute;
 }
 /* Fin Css Header Eduardo */
-
 /*Inicio Who We Are*/
-
 #whoweare{
     background-color: #faf5f5ce;
 }
-
-#whoweare article{
-    text-align: justify;
-}
-
-#whoweare .row p{
-    text-align: left;
-}
-
-.border-right {
+.border-vr{
     border-right: 1px solid lightgrey;
 }
-
 @media screen and (max-width: 1200px) {
-    .border-right {
-            border-right: 0
+    .border-vr{
+        border: 0;
     }
-    #img-end{
-        display:none;
-    }
-}
-
+}  
 /*Fin Who We Are*/
-
 /*Inicio Services*/
-
-#service article {
-    text-align: left;
-}
-
 #service p{
     font-size: 0.9em;
-    color: rgb(87, 85, 85); /*color del texto del paragrafo más claro ??*/
 }
-
-#service h3 {
-   padding-top: 25px;/*titulo más abajo */
-}
-
 .fa-solid{
     --fa-border-color:lightgrey;
     --fa-border-style: solid;
     --fa-border-width: 5px;
     --fa-border-radius: 50%;
-    --fa-border-padding:1.1em;
+    --fa-border-padding:1em;
     color:#61458c;
     transition-duration: 0.8s;
     position: relative;
+    margin-bottom: 110px;
 }
-
 .fa-solid::before {     /* pseudoclass ::before para centrar el icono dentro del círculo.*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 @media screen and (min-width: 1200px){
     .fa-solid:hover {
         background-color:#61458c;
@@ -193,24 +125,24 @@ nav {
         color:white;
     }
 }
-
+@media screen and (min-width: 768px){
+    .me-md-7{
+        margin-right: 3em;
+    }
+}
 /*Fin Services*/
-
 /* Inicio Portfolio */
-
 #portfolio{
     background-color: #F2F2F2;
     padding: 20px 0 80px;
     text-align: center;
 }
-
 #portfolio h2{
     color: #4E4E4E;
     font-size: 2.5rem;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
 #portfolio p{
     color: #605f5f;
     font-size: 1.3rem;
@@ -220,13 +152,11 @@ nav {
     margin: auto;
     width: 75%;
 }
-
 .col-sm-12 img{
     width: 200px;
     height: 120px;
     transition: all 0.9s ease;
 }
-
 @media (min-width: 1200px){
     img.transform:hover{
         transform: rotateZ(-8deg);
@@ -236,89 +166,63 @@ nav {
         border-radius: 50%;
     }
 }
-
 div.marginAuto{
     margin: auto;
 }
-
 /* /Portfolio */
-
 /*CSS Contacto */
-
 #contact{
     margin: auto;
     text-align: center;
     padding: 6%;
 }
-
 #contact h3{
     font-size: 1.4em;
     font-weight: 300;
 }
-
 #contact h4{
     font-size: 1.3em;
     margin-bottom: 0.5em;
     color: #4E4E4E;
 }
-
 #map{
     width: 300px;
     height: 300px;
     border-radius: 50%;
     border: 2px solid #4E4E4E;
 }
-
 #address{
-
+    
     margin-left: 5%;    
     vertical-align: bottom;
-    text-align: left;
+    text-align: center;
+    padding-top: 40px;
 }
-
-address{
-    padding-block: 10px;
+.embed-responsive-item{
+    margin-top: 20px;
 }
-
-@media (max-width: 768px) {
+@media (min-width:995px) {
     #address{
-        text-align: center;
-        transform: scale(0.7);
+        text-align: left;
     }
 }
-
 /* Fin Contacto */
-
-
-/* Footer Vicky */
-
+/* Formulario */
 #containerFormContact{
     background-color: #79629E;
     background-image: url(../img/map-image.png);
     background-size: auto 100%;
 }
-
 #containerFormContact label{
     display: block;
     text-align: left;
     vertical-align: top;
 }
-
 @media (min-width: 576px) {
     #containerFormContact .form-group {
         padding: 0.1em;
     }
-    #containerFormContact .col-form-label {
-        text-align: right;
-    }
 }
-
-@media (max-width: 576px) {
-    #containerFormContact .col-form-label {
-    text-align: left;
-    }
-}
-
 #containerFormContact .custom-btn {
     background-color: #EFEFEF;
     color: #000000;
@@ -328,15 +232,21 @@ address{
 #containerFormContact .custom-btn:hover {
     background-color: #838383;
 }
-
+/* Pokemon */
+.pokemon-figure{
+    width: 100%;
+    color: #F2F2F2;
+}
+.displayI{
+    display: inline;
+}
+/* /Pokemon */
 /* Footer */
-
 footer p{
     background-color: #61458C;
     color: #FFFFFF;
     margin: 0px;
 }
-
 footer a{
     color: #FFFFFF;
     &:hover{
@@ -344,23 +254,79 @@ footer a{
         background-color: #F2F2F2;
     }
 }
-
 /* /Footer */
-
-/* Gracias por contactarnos */
-
-.link-btn{
-    color:#ffffff;
-    font-size: 1.1em;
-    background-color: #61458C;
-    padding: 1em 2em;
-    border-radius: 10px;
-    text-decoration: none;
-    &:hover{
-        border: 2px solid #61458C;
-        background-color: white;
-        color: #4E4E4E;
+/* Medias hasta 768*/
+@media screen and (max-width: 768px) {
+/*General*/
+body {
+    font-size: 18px;
+}
+/*Header*/
+.header-title {
+    font-size: 1.5em;
+}
+#whoweare .left-article, #whoweare .right-article {
+    font-size: 0.8em;
+}
+/*Contact*/
+#address{
+    padding-top: 20px;
+    transform: scale(0.7);
+}
+}
+/* Fin Medias */
+/* Medias hasta 1280*/
+@media (min-width: 768px) {
+    /*Header*/
+    .header-title {
+        font-size: 32px;
+        text-align: left;
+    }
+}
+/* Medias desde 1200*/
+@media (min-width: 1200px) {
+    /*Header*/
+    header {
+        background-image: url('../img/header.jpg'); 
     }
 }
 
-/* /Gracias por contactarnos */
+/*modal completo*/
+.modal {
+    display: block;
+}
+
+.modal-title{
+    font-size: xx-large;
+    margin-top: 10px;
+   
+}
+
+.modal-header{
+    border-bottom: 2px ; 
+    padding: 10px 20px 0 20px;
+}
+
+.modal-content {
+    background: rgb(240,236,246);
+    background: linear-gradient(90deg, rgba(240,236,246,1) 0%, rgba(165,158,176,1) 100%);
+}
+
+.list-group{
+    border-radius: 1px solid;
+}
+
+.list-group-item {
+    border: 5px solid rgba(255, 255, 255, 0.575);
+    background-color: #61458c60;
+    padding: 5px;
+    font-size:large;
+}
+ 
+kbd {
+    background-color: white;
+    color: black;
+    font-size:x-large;
+    text-align: center;
+    margin-right: 5px;
+}
