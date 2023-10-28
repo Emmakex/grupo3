@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
       const targetSection = sections[currentSectionIndex]; // Guarda la sección a la que ir
+      updateURL(targetSection); // #
       let sectionTop = '0'; // El párametro de top al que hará scroll, predefinido en 0 para que suba arriba del todo
       if (targetSection) {
         if(targetSection.offsetTop != '300'){ // Si el offSetTop no es 300, porque 300 es el offSetTop del inicio y tiene que subir hasta arriba
@@ -39,6 +40,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+  function updateURL(section) { // #
+    if (section.id) {
+      history.pushState({}, '', `#${section.id}`);
+    } else {
+      history.pushState({}, '', window.location.pathname);
+    }
+  }
 
   // Función para crear elementos
 
