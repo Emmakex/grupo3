@@ -165,11 +165,9 @@ async function getCountries() {
     body: JSON.stringify({
       query: `query getCountries {
           countries{
-           name
+          name
           emoji
           capital
-          currency
-          code
           }
         }`,
     }),
@@ -192,26 +190,20 @@ function startRound() {
   }
 
   document.getElementById("easteregg").style.display = "block";
-
-  let randomNumber = Math.floor(
+  let randomNumbers = [];
+  for (let i = 0; i < 3; i++) {
+    let randomNumber = Math.floor(
     Math.random() * countries.data.countries.length
-  );
-  randomCountry = countries.data.countries[randomNumber];
-
-  console.log(randomCountry.name);
+    );
+    randomNumbers.push(randomNumber);
+  }
+  randomCountry = countries.data.countries[randomNumbers[0]]
+  let randomCountryFalse1 = countries.data.countries[randomNumbers[1]]
+  let randomCountryFalse2 = countries.data.countries[randomNumbers[2]]
+  console.log(randomNumbers)
 
   document.getElementById("eastereggQuestion").innerHTML =
     "What is the capital of " + randomCountry.name + " " + randomCountry.emoji;
-
-  let randomNumberFalseAnswer1 = Math.floor(
-    Math.random() * countries.data.countries.length
-  );
-  let randomNumberFalseAnswer2 = Math.floor(
-    Math.random() * countries.data.countries.length
-  );
-
-  let randomCountryFalse1 = countries.data.countries[randomNumberFalseAnswer1];
-  let randomCountryFalse2 = countries.data.countries[randomNumberFalseAnswer2];
 
   const array = [
     randomCountry.capital,
