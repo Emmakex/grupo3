@@ -1,4 +1,4 @@
-// Captura tecla pulsada y hace funciones según si la tecla es 1 - 5, a - b -h -  Escape
+// Captura tecla pulsada y hace funciones según si la tecla es 1 - 6, a - b -h -  Escape
 
 document.addEventListener("DOMContentLoaded", function() {
     let currentSectionIndex = 0;
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Función para crear el modal de ayuda
 
 function createModal()  {
+  console.log('funciona')
   
   let titulos = [...document.querySelectorAll('section[data-key]')] // Captura las secciones que saldrán en el modal
 
@@ -87,7 +88,7 @@ function createModal()  {
           element('h5', {classNames: ['modal-title']}, ['Help']), // El título del modal
           element('button', {classNames: ['btn-close'], type: 'button', onclick: 'closeModal()'}, []) // El botón para cerrar la ventana
         ]),
-        element('div', {classNames: ['modal-body']}, [element('p', {classNames: ['ms-2', 'fs-5']}, ['Select 1-5 to jump to webpage sections.']), // El título del modal
+        element('div', {classNames: ['modal-body']}, [element('p', {classNames: ['ms-2', 'fs-6']}, ['Select 1-6 to jump to webpage sections.']), // El título del modal
 
           element('ul', {classNames : ['list-group']}, titulos) // Creamos la lista de secciones usando los titulos de antes
         ])

@@ -187,25 +187,8 @@ background-color: #E1E1E1;
         border: 0;
     }
 } 
-.container-trivia {
-    width: 300px;
-    height: 200px;
-    margin-left: 30px;
-    border: 1px solid #ccc;
-    float: right;
-}
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-}
-#question-container {
-    margin-top: 20px;
-}
-#question {
-    font-weight: bold;
-}
-#answer {
-    color: #555;
+.text-start img {
+    float: right
 } 
 /*Fin Who We Are*/
 /*Inicio Services*/

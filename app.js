@@ -113,44 +113,8 @@ async function getRandomQuestion() {
         document.getElementById('question').innerText = 'No carga la pregunta';
     }
 }
-// /Api Trivia
-
 
 // Api Quiz //
-// async function getCountries() {
-//     console.log("getCountries");
-//     let results = await fetch("https://countries.trevorblades.com", {
-//       method: "POST",
-  
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-  
-//       body: JSON.stringify({
-//         query: `query getCountries {
-//             countries{
-//             name
-//             capital
-//             }
-//         }`,
-//       }),
-//     });
-//     let countries = await results.json();
-//     console.log(countries.data);
-  
-//     let randomNumber = Math.floor(
-//       Math.random() * countries.data.countries.length
-//     );
-//     let randomcountry = countries.data.countries[randomNumber];
-  
-//     console.log(randomcountry.name);
-  
-//     document.getElementById("eastereggQuestion").innerHTML =
-//       "What is the capital of " + randomcountry.name;
-//   }
-//   getCountries();
-
-// Api Quiz 2 //
 let countries;
 
 async function getCountries() {
