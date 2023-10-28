@@ -230,4 +230,4 @@ function checkAnswer() {
   }
 }
 
-getCountries();
+setTimeout(getCountries, 1000) // Al segundo de cargar la página trae los paises

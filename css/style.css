@@ -1,41 +1,30 @@
 /*Estilos Generales */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F4F4F4;
-  }
-  .quiz-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .question-container {
-    margin-bottom: 20px;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  input[type="radio"] {
-    margin-right: 5px;
-  }
-  label {
-    font-size: 18px;
-  }
-  #result {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  #rounds, #points {
-    font-size: 18px;
-  }
-
-
+/* Quiz */
+.quiz-container-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+.points-and-rounds{
+    font-size: 2rem;
+    color: #79629E;
+}
+.lineAnswer{
+    background-color: #61458c60;
+    padding: 0.4rem;
+}
+.btn-primary {
+    background-color: #79629E;
+    border: 0;
+    margin-top: 2rem;
+}
+.btn-primary:hover{
+    background-color: #61458C;
+    border: 0;
+}
+/* /Quiz */
 
 
 body {
@@ -329,7 +318,6 @@ div.marginAuto{
 /* Pokemon */
 .pokemon-figure{
     width: 100%;
-    color: #F2F2F2;
 }
 .pokemon-figure img {
     height: auto !important;
