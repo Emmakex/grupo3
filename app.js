@@ -154,20 +154,20 @@ async function getRandomQuestion() {
 let countries;
 
 async function getCountries() {
-  console.log("getCountries");
+  console.log("Getting countries...");
   let results = await fetch("https://countries.trevorblades.com", {
     method: "POST",
-
     headers: {
       "Content-Type": "application/json",
     },
-
     body: JSON.stringify({
       query: `query getCountries {
           countries{
-          name
+           name
           emoji
           capital
+          currency
+          code
           }
         }`,
     }),
@@ -190,22 +190,26 @@ function startRound() {
   }
 
   document.getElementById("easteregg").style.display = "block";
-  let randomNumbers = [];
-  for (let i = 0; i < 3; i++) {
-    let randomNumber = Math.floor(
-    Math.random() * countries.data.countries.length
-    );
-    if(!randomNumbers.includes(randomNumber)) {
-    randomNumbers.push(randomNumber);
-    }
-  }
-  randomCountry = countries.data.countries[randomNumbers[0]]
-  let randomCountryFalse1 = countries.data.countries[randomNumbers[1]]
-  let randomCountryFalse2 = countries.data.countries[randomNumbers[2]]
-  console.log(randomNumbers)
+
+  let randomNumber = Math.floor(Math.random() * countries.data.countries.length);
+  randomCountry = countries.data.countries[randomNumber];
+
+  console.log(randomCountry.name);
 
   document.getElementById("eastereggQuestion").innerHTML =
-    "What is the capital of " + randomCountry.name + " " + randomCountry.emoji;
+    "What is the capital of " + randomCountry.name + " " + randomCountry.emoji + "?";
+
+  let randomCountryFalse1, randomCountryFalse2;
+
+  do {
+    let randomNumberFalseAnswer1 = Math.floor(Math.random() * countries.data.countries.length);
+    randomCountryFalse1 = countries.data.countries[randomNumberFalseAnswer1];
+  } while (!randomCountryFalse1.capital || randomCountryFalse1.capital === randomCountry.capital);
+
+  do {
+    let randomNumberFalseAnswer2 = Math.floor(Math.random() * countries.data.countries.length);
+    randomCountryFalse2 = countries.data.countries[randomNumberFalseAnswer2];
+  } while (!randomCountryFalse2.capital || randomCountryFalse2.capital === randomCountry.capital || randomCountryFalse2.capital === randomCountryFalse1.capital);
 
   const array = [
     randomCountry.capital,
@@ -228,19 +232,27 @@ function startRound() {
 
 function checkAnswer() {
   var ele = document.getElementsByName("quiz");
+  let answerSelected = false;
 
   for (let i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
+      answerSelected = true;
       if (ele[i].value === randomCountry.capital) {
         points++;
         document.getElementById("result").innerHTML = "Correct!";
       } else {
-        document.getElementById("result").innerHTML = "Wrong! The capital of " + randomCountry.name + " is " + randomCountry.capital;
+        document.getElementById("result").innerHTML = "Incorrect! The capital of " + randomCountry.name + " is " + randomCountry.capital;
       }
+      ele[i].checked = false;
+      break;
     }
-    ele[i].checked = false;
   }
-  
+
+  if (!answerSelected) {
+    document.getElementById("result").innerHTML = "Please select an answer.";
+    return;
+  }
+
   if (round < rounds) {
     round++;
     document.getElementById("rounds").innerHTML = round + " / " + rounds;
@@ -249,6 +261,8 @@ function checkAnswer() {
   } else {
     document.getElementById("easteregg").style.display = "none";
     document.getElementById("result").innerHTML = "Game Over! You scored " + points + " points.";
+    document.getElementById("points").innerHTML = points;
+    document.getElementById("rounds").innerHTML = rounds + " / " + rounds;
   }
 }
 
