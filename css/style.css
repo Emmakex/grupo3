@@ -1,32 +1,4 @@
 /*Estilos Generales */
-
-/* Quiz */
-.quiz-container-items{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
-}
-.points-and-rounds{
-    font-size: 2rem;
-    color: #79629E;
-}
-.lineAnswer{
-    background-color: #61458c60;
-    padding: 0.4rem;
-}
-.btn-primary {
-    background-color: #79629E;
-    border: 0;
-    margin-top: 2rem;
-}
-.btn-primary:hover{
-    background-color: #61458C;
-    border: 0;
-}
-/* /Quiz */
-
-
 body {
     margin: 0 auto;
 }
@@ -315,6 +287,31 @@ div.marginAuto{
 #containerFormContact .custom-btn:hover {
     background-color: #838383;
 }
+/* Quiz */
+.quiz-container-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+.points-and-rounds{
+    font-size: 2rem;
+    color: #79629E;
+}
+.lineAnswer{
+    background-color: #61458c60;
+    padding: 0.4rem;
+}
+.btn-primary {
+    background-color: #79629E;
+    border: 0;
+    margin-top: 2rem;
+}
+.btn-primary:hover{
+    background-color: #61458C;
+    border: 0;
+}
+/* /Quiz */
 /* Pokemon */
 .pokemon-figure{
     width: 100%;

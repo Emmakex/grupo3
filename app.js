@@ -88,15 +88,16 @@ async function getWeatherData(lat, lon) {
       document.getElementById('weather-container').textContent = 'Este navegador no admite la geolocalización.';
     }
   }
-  getLocation(); 
 
-  document.getElementById('close-btn-weather').addEventListener('click', () => {
-    document.getElementById('weather-bar').classList.toggle('invisible');
-    document.querySelector('.close-btn i').classList.toggle('fa-chevron-down');
-    console.log(document.getElementById('weather-bar'))
-  });
-  
+  setTimeout(function() {
+    getLocation(); 
 
+    document.getElementById('close-btn-weather').addEventListener('click', () => {
+      document.getElementById('weather-bar').classList.toggle('invisible');
+      document.querySelector('.close-btn i').classList.toggle('fa-chevron-down');
+      console.log(document.getElementById('weather-bar'))
+    });
+  }, 1000) // Para darle tiempo al código de que los elementos ya estén cargados en el document
 //   /API weather
 
 // API Trivia
@@ -128,7 +129,7 @@ async function getCountries() {
     body: JSON.stringify({
       query: `query getCountries {
           countries{
-           name
+          name
           emoji
           capital
           currency
