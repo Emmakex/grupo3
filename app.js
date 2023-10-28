@@ -92,6 +92,7 @@ async function getWeatherData(lat, lon) {
 
   document.getElementById('close-btn-weather').addEventListener('click', () => {
     document.getElementById('weather-bar').classList.toggle('invisible');
+    document.querySelector('.close-btn i').classList.toggle('fa-chevron-down');
     console.log(document.getElementById('weather-bar'))
   });
   
