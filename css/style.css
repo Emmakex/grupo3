@@ -1,4 +1,43 @@
 /*Estilos Generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+  }
+  .quiz-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .question-container {
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  label {
+    font-size: 18px;
+  }
+  #result {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #rounds, #points {
+    font-size: 18px;
+  }
+
+
+
+
 body {
     margin: 0 auto;
 }
