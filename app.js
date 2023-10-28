@@ -195,7 +195,9 @@ function startRound() {
     let randomNumber = Math.floor(
     Math.random() * countries.data.countries.length
     );
+    if(!randomNumbers.includes(randomNumber)) {
     randomNumbers.push(randomNumber);
+    }
   }
   randomCountry = countries.data.countries[randomNumbers[0]]
   let randomCountryFalse1 = countries.data.countries[randomNumbers[1]]
