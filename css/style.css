@@ -353,6 +353,12 @@ footer a{
     }
 }
 /* /Footer */
+/* Modal */
+.pointer {
+    cursor: pointer;
+}
+/* /fin modal */
+
 /* Medias hasta 768*/
 @media screen and (max-width: 768px) {
 /*General*/
@@ -372,7 +378,9 @@ body {
     transform: scale(0.7);
 }
 }
+
 /* Fin Medias */
+
 /* Medias hasta 1280*/
 @media (min-width: 768px) {
     /*Header*/
@@ -397,7 +405,6 @@ body {
 .modal-title{
     font-size: xx-large;
     margin-top: 10px;
-   
 }
 
 .modal-header{
