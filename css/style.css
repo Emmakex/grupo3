@@ -147,6 +147,20 @@ h1 {
 .fa-wind {
     padding-left: 0.3rem;
 }
+@media (max-width : 768px) {
+    .weather-bar {
+        flex-direction: column;
+        margin: 20px 30px 20px -10px;
+    }
+    .weather-section-1{
+        margin-top: -20px;
+        margin-bottom: 25px;
+    }
+    .weather-section-2, .weather-section-3 {
+        margin-bottom: 25px;
+    }
+
+}
 /* Fin API clima */
 /*Inicio Who We Are*/
 #whoweare{
@@ -160,8 +174,9 @@ h1 {
         border: 0;
     }
 } 
-.text-start img {
-    float: right
+article img {
+    float: right;
+    height: 100%;
 } 
 /*Fin Who We Are*/
 /*Inicio Services*/
@@ -283,7 +298,6 @@ div.marginAuto{
 #containerFormContact label{
     display: block;
     text-align: left;
-    vertical-align: top;
 }
 @media (min-width: 576px) {
     #containerFormContact .form-group {
@@ -304,7 +318,7 @@ div.marginAuto{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
+    width: 50%;
 }
 .points-and-rounds{
     font-size: 2rem;
@@ -319,6 +333,7 @@ div.marginAuto{
     background-color: #79629E;
     border: 0;
     margin-top: 2rem;
+    margin-left: 0 !important;
 }
 .btn-primary:hover{
     background-color: #61458C;
@@ -330,6 +345,13 @@ div.marginAuto{
     }
 }
 /* /Quiz */
+@media (max-width: 768px) {
+    .marker {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* Pokemon */
 .pokemon-figure{
     width: 100%;

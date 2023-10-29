@@ -67,15 +67,23 @@ async function getWeatherData(lat, lon) {
 
   // Función para actualizar la barra de clima
   function updateWeatherBar(temperature, humidity, windSpeed) {
+    var widthWindow = window.innerWidth; // Guarda el ancho de ventana para poder ejecutar un setInterval o el otro
     document.getElementById('temperature').querySelector('span').textContent = `${temperature}°C`; // Captura el span que hay dentro del div 'temperatura' y cambia el texto con los datos nuevos
     document.getElementById('humidity').querySelector('span').textContent = `${humidity}%`; // Captura el span que hay dentro del div 'humedad' y cambia el texto con los datos nuevos
     document.getElementById('wind').querySelector('span').textContent = `${windSpeed} m/s`; // Captura el span que hay dentro del div 'viento' y cambia el texto con los datos nuevos
     const weatherBar = document.getElementById('weather-bar'); // Captura el div de la barra de clima
     let position = 0; // Variable para fijar la posición a la que ha de moverse el div con el translateX
-    setInterval(() => {
+    if(widthWindow < 768){// Si el ancho de ventana es menor de 768
+      setInterval(() => {
         position = (position + 1) % 3; // Cálculo para la nueva posición
-        weatherBar.style.transform = `translateX(${-33.333 * position}%)`; // Añade el efecto de translación a la posición nueva
+        weatherBar.style.transform = `translateY(${-33.333 * position}%)`; // Añade el efecto de translación a la posición nueva
     }, 3000);
+    }else{ // Si el ancho de ventana es superior a 768
+      setInterval(() => {
+          position = (position + 1) % 3; // Cálculo para la nueva posición
+          weatherBar.style.transform = `translateX(${-33.333 * position}%)`; // Añade el efecto de translación a la posición nueva
+      }, 3000);
+    }
   }
 
   // Función para guardar la ubicacion
