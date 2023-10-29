@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("keydown", function(event) { // Captura la tecla pulsada
       
       if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA"|| event.ctrlKey || event.metaKey || 
-      event.shiftKey) { // Si está activo el input o el textarea sale de la función
+      event.shiftKey) { // Si está activo el input o el textarea sale de la función, y evitar que algunas teclas hagan scroll
         return;
       }
-  
       if (event.key === "a") { // Si la tecla pulsada es a
         currentSectionIndex = Math.max(0, currentSectionIndex - 1); // Resta uno al índice al que hará scroll
       } else if (event.key === "b") { // Si la tecla pulsada es b
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
       const targetSection = sections[currentSectionIndex]; // Guarda la sección a la que ir
-      updateURL(targetSection); // #
+      updateURL(targetSection); // Invoca la función para recargar la url con el fragmento
       let sectionTop = '0'; // El párametro de top al que hará scroll, predefinido en 0 para que suba arriba del todo
       if (targetSection) {
         if(targetSection.offsetTop != '300'){ // Si el offSetTop no es 300, porque 300 es el offSetTop del inicio y tiene que subir hasta arriba
@@ -41,11 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
-  function updateURL(section) { // #
-    if (section.id) {
-      history.pushState({}, '', `#${section.id}`);
-    } else {
-      history.pushState({}, '', window.location.pathname);
+//  Función para añadir el fragmento a la url al pulsar del 1 al 5
+  function updateURL(section) {
+    if (section.id) { // Si hay sección con id...
+      history.pushState({}, '', `#${section.id}`); // ...Actualiza la url con el fragmento
+    } else { // Si no hay sección con id...
+      history.pushState({}, '', window.location.pathname); // ...Actualiza con el mismo url
     }
   }
 
