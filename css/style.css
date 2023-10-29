@@ -47,10 +47,9 @@ header {
 }
 @media (min-width: 1280px) {
     .header-title {
-        color: #fff;
+        color: #696969;
         font-weight: 500;
         padding: 15px;
-        border: 4px solid #61458C;
     }
     
 }
