@@ -18,29 +18,38 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #61458C;
     min-height: 600px;
     position: relative;
 }
 .header-content {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .header-title {
     font-size: 26px;
+    font-weight: bold;
     text-align: center;
 }
 @media (min-width: 1025px) {
     .header-content {
         left: 5%;
+        top: 50%;
         transform: translateY(-50%);
     }
     .header-title {
         font-size: 32px;
         text-align: left;
+        color: #2c1f40;
     }
+}
+@media (min-width: 1280px) {
+    .header-title {
+        color: #fff;
+    }
+    
 }
 nav {
     background-color: #61458C;
@@ -300,6 +309,7 @@ div.marginAuto{
     color: #79629E;
 }
 .lineAnswer{
+    width: 50%;
     background-color: #61458c60;
     padding: 0.4rem;
 }
@@ -311,6 +321,11 @@ div.marginAuto{
 .btn-primary:hover{
     background-color: #61458C;
     border: 0;
+}
+@media (max-width: 768px) {
+    .lineAnswer {
+        width: 100%;
+    }
 }
 /* /Quiz */
 /* Pokemon */
