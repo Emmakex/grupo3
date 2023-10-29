@@ -91,41 +91,42 @@ nav {
     margin: 30px auto;
 }
 h1 {
-font-size: 2em;
-margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 .weather-container {
-overflow: hidden;
-position: relative;
-height: 50px;
-margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    margin-top: 20px;
 }
 .weather-bar {
-display: flex;
-transition: transform 1s ease-in-out;
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
 }
 .weather-section {
-flex: 0 0 33.333%;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-height: 100%;
-padding: 0 10px;
-box-sizing: border-box;
+    flex: 0 0 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 .close-btn {
-position: absolute;
-top: 0;
-right: 0;
-background-color: transparent;
-border: none;
-font-size: 24px;
-cursor: pointer;
-padding: 0 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
 }
 .close-btn:hover {
-background-color: #E1E1E1;
+    background-color: #E1E1E1;
 }
 .fa-thermometer-three-quarters, .fa-tint, .fa-wind {
     color: #61458c;
