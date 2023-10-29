@@ -48,6 +48,7 @@ header {
 @media (min-width: 1280px) {
     .header-title {
         color: #fff;
+        font-weight: 500;
     }
     
 }
