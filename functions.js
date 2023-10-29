@@ -87,7 +87,7 @@ function createModal()  {
       element('div', {classNames: ['modal-content']}, [
         element('div', {classNames: ['modal-header']}, [
           element('h5', {classNames: ['modal-title']}, ['Help']), // El título del modal
-          element('div', {classNames: ['btn-close', 'pointer'], onclick: 'closeModal()'}, []) // El botón para cerrar la ventana
+          element('div', {classNames: ['btn-close', 'pointer']}, []) // El botón para cerrar la ventana
         ]),
         element('div', {classNames: ['modal-body']}, [element('p', {classNames: ['ms-2', 'fs-6']}, ['Select 1-6 to jump to webpage sections.']), // El título del modal
 
@@ -99,11 +99,15 @@ function createModal()  {
   return modal; // devuelve el modal construido
 }
 
+
 // Funcion para añadir modal al segundo de cargar la página y quitarlo a los 5 segundos
 
 function addModal(){
   let modalToAdd = createModal(); // Llama a la función para crear el modal
   document.body.appendChild(modalToAdd); // Lo añade al documento
+  document.querySelector('.pointer').addEventListener('click', () => {
+    closeModal()
+    })
 }
 setTimeout(addModal, 1000) // Para que se visualice en pantalla al segundo de cargar la página
 setTimeout(closeModal, 5000) // Para que desaparezca a los 5 segundos

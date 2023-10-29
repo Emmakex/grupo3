@@ -49,6 +49,8 @@ header {
     .header-title {
         color: #fff;
         font-weight: 500;
+        padding: 15px;
+        border: 4px solid #61458C;
     }
     
 }
