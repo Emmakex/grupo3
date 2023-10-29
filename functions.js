@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     document.addEventListener("keydown", function(event) { // Captura la tecla pulsada
       
-      if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") { // Si está activo el input o el textarea sale de la función
+      if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA"|| event.ctrlKey || event.metaKey) { // Si está activo el input o el textarea sale de la función
         return;
       }
   
