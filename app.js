@@ -192,15 +192,17 @@ function startRound() {
 function checkAnswer() {
   var ele = document.getElementsByName("quiz"); // Captura los elementos con name quiz
   let answerSelected = false; //Crea variable de respuesta seleccionada en false por defecto
-
+  let respuesta; // variable para guardar la respuesta y poder mostrarla en la última ronda
   for (let i = 0; i < ele.length; i++) { // Recorre el array de documentos con name quiz
     if (ele[i].checked) { // Si ese elemento está checked
       answerSelected = true; // Cambia la variable de respuesta seleccionada a true
       if (ele[i].value === randomCountry.capital) { // Si el value de la respuesta coincide con la capital del país seleccionado...
         points++; // ...Suma 1 punto..
         document.getElementById("result").innerHTML = "Correct!"; // ... Y añade el texto Correct!
+        respuesta = "Correct!" // Guarda la respuesta para la última ronda
       } else { // Si la respuesta no coincide...
         document.getElementById("result").innerHTML = "Incorrect! The capital of " + randomCountry.name + " is " + randomCountry.capital; // Añade el texto de incorrecto y muestra la respuesta correcta
+        respuesta = "Incorrect! The capital of " + randomCountry.name + " is " + randomCountry.capital; // Guarda la respuesta para la última ronda
       }
       ele[i].checked = false; // Si ese elemento no está seleccionado pausa el for
       break;
@@ -219,10 +221,25 @@ function checkAnswer() {
     startRound(); // ...Inicia otra ronda invocando la función
   } else { // Si el número de ronda es más alto que el número de rondas máximas...
     document.getElementById("easteregg").style.display = "none"; // ... Esconde el div de juego...
-    document.getElementById("result").innerHTML = "Game Over! You scored " + points + " points."; // ... Muestra el div de resultado con el texto actualizado
+    document.getElementById("result").innerHTML = `<p>${respuesta}</p><p>Game Over! You scored is ${points} points.</p>`; // ... Muestra el div de resultado con  el texto actualizado
     document.getElementById("points").innerHTML = points; // ...Actualiza el div de puntos con el texto nuevo...
     document.getElementById("rounds").innerHTML = rounds + " / " + rounds; // ...Actualiza el div de rondas con el texto nuevo
+    document.getElementById("button-game").innerHTML = "Reset"; // Captura el botón y le cambia el texto a reset
+    document.getElementById("button-game").onclick = resetGame; // Captura el botón y le cambia la función a la de reset
+
   }
+}
+
+// Función para resetear el juego
+function resetGame () {
+  document.getElementById("button-game").innerHTML = "Submit"; // Captura el botón y le pone el texto submit 
+  document.getElementById("button-game").onclick = checkAnswer; // Captura el botón y le cambia el onclick a chekanswer
+  document.getElementById("result").innerHTML = ""; // Captura el párrafo de resultado y lo deja vacío
+  round = 1; // Resetea el número de rondas
+  rounds = 5; // Resetea las rondas máximas
+  points = 0; // Resetea los puntos
+  randomCountry; // Resetea el país
+  startRound(); // Invoca la función de jugar
 }
 
 setTimeout(getCountries, 1000) // Al segundo de cargar la página trae los paises
