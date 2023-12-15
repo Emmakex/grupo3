@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     let currentSectionIndex = 0;
     const sections = document.querySelectorAll("section"); // Captura las secciones
+    let keyH = false;
   
     document.addEventListener("keydown", function(event) { // Captura la tecla pulsada
       
@@ -14,9 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
         currentSectionIndex = Math.max(0, currentSectionIndex - 1); // Resta uno al índice al que hará scroll
       } else if (event.key === "b") { // Si la tecla pulsada es b
         currentSectionIndex = Math.min(sections.length - 1, currentSectionIndex + 1); // Añade uno al índice al que hará scroll
-      } else if (event.key === "h") { // Si la tecla pulsada es h
-        addModal(); // Abrirá el modal de ayuda
+      } else if (event.key === "h") {// Si la tecla pulsada es h
+        if (!keyH){
+          keyH = true;
+          addModal(); // Abrirá el modal de ayuda
+        }
       }else if (event.key === "Escape") { // Si la letra pulsada es Escape
+          keyH = false;
           closeModal(); // Cerrará el modal de ayuda
       } else {
         let targetSection = document.querySelector(`section[data-key="${event.key}"]`); // Captura la sección del número pulsado, si la hay 
@@ -115,6 +120,7 @@ setTimeout(closeModal, 5000) // Para que desaparezca a los 5 segundos
 // Función para cerrar el modal
 
 function closeModal(){
+  keyH = false;
   let modalToClose = document.getElementsByClassName("modal"); // Captura el modal
   if(modalToClose.length > 0) { // Si la array es más larga de 0, o sea, contiene un modal
     modalToClose[0].remove(); // Quita el primer elemento de la array (el modal)
